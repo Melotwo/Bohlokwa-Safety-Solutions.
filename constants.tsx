@@ -12,7 +12,7 @@ export const PRODUCTS: Product[] = [
     name: 'SABS Approved Yellow Industrial Hard Hat',
     category: Category.HEAD,
     description: 'High-visibility yellow safety helmet with reinforced ribbing for maximum impact resistance. Sourced directly for site safety compliance.',
-    image: 'https://images.unsplash.com/photo-1606314842584-9b0d90ba7e2f?auto=format&fit=crop&q=80&w=800',
+    image: https://images.pexels.com/photos/38070/pexels-photo-38070.jpeg$0 ,
     features: ['SABS Certified', '6-Point Suspension', 'Shock Resistant Shell'],
     industrialRating: 'SANS 1397'
   },
@@ -21,7 +21,7 @@ export const PRODUCTS: Product[] = [
     name: 'Pro-Series Red & Black Impact Gloves',
     category: Category.HAND,
     description: 'Heavy-duty protection with TPR impact shields on the knuckles and fingers. Designed for high-risk industrial and mining operations.',
-    image: 'https://images.unsplash.com/photo-1609220136736-443140cffec6?auto=format&fit=crop&q=80&w=800',
+    image: https://images.pexels.com/photos/7362896/pexels-photo-7362896.jpeg$0 ,
     features: ['Vibration Dampening', 'Cut Resistant', 'Superior Grip'],
     industrialRating: 'EN 388:2016'
   },
@@ -29,8 +29,8 @@ export const PRODUCTS: Product[] = [
     id: '3',
     name: 'Passion Hi-Viz Criss Cross Lime Vest',
     category: Category.BODY,
-    description: 'Signature criss-cross lime reflective vest as featured in the U-Safety Solutions catalog. Lightweight mesh with high-intensity reflective tape.',
-    image: 'https://images.unsplash.com/photo-1578662996442-48f60103fc96?auto=format&fit=crop&q=80&w=800',
+    description: 'Signature criss-cross lime reflective vest. Lightweight mesh with high-intensity reflective tape for 360-degree visibility.',
+    image: https://images.pexels.com/photos/8486979/pexels-photo-8486979.jpeg
     features: ['Class 2 Visibility', 'Zip & ID Pocket', 'Breathable Mesh'],
     industrialRating: 'EN ISO 20471'
   },
@@ -38,27 +38,26 @@ export const PRODUCTS: Product[] = [
     id: '4',
     name: 'Blue Integrated Pro-Protection Set',
     category: Category.MINING,
-    description: 'A complete specialized protection kit featuring the BK Blue Hard Hat, panoramic clear goggles, and high-performance valve respirator mask.',
-    image: 'https://images.unsplash.com/photo-1577962917302-cd874c4e31d2?auto=format&fit=crop&q=80&w=800',
+    description: 'A complete specialized protection kit featuring a reinforced blue hard hat, panoramic clear goggles, and a high-performance valve respirator.',
+    image: https://images.pexels.com/photos/3846183/pexels-photo-3846183.jpeg,
     features: ['Complete Face Seal', 'Anti-Fog Goggles', 'N95 Valve Mask'],
     industrialRating: 'SANS 20345 Compliant'
   },
   {
     id: '5',
-    name: 'Disposable Nitrile Industrial Gloves',
-    category: Category.HAND,
-    description: 'Powder-free, high-tactility disposable gloves for precision handling and chemical protection. Sourced for industrial laboratories.',
-    image: 'https://images.unsplash.com/photo-1584632448540-3c24c4d49ac5?auto=format&fit=crop&q=80&w=800',
-    features: ['Latex-Free', 'Textured Fingertips', 'Tear Resistant'],
-    industrialRating: 'EN 455'
-  },
-  {
-    id: '6',
     name: 'Clear Wide-View Panoramic Goggles',
     category: Category.EYE,
     description: 'Industrial safety goggles with indirect ventilation and anti-fog coating. Fits comfortably over most prescription eyewear.',
-    image: 'https://images.unsplash.com/photo-1559056199-641a0ac8b55e?auto=format&fit=crop&q=80&w=800',
-    features: ['Indirect Ventilation', 'Anti-Scratch Lens', 'Soft Face Seal'],
+    image: https://images.pexels.com/photos/7789650/pexels-photo-7789650.jpeg,
     industrialRating: 'ANSI Z87.1+'
+  },
+  {
+    id: '6',
+    name: 'Industrial Valve Respirator (N95)',
+    category: Category.RESPIRATORY,
+    description: 'Superior protection against fine dust and particles. Features a cool-flow valve to reduce heat build-up.',
+    image: 'https://images.unsplash.com/photo-1584622781564-1d9876a13d00?auto=format&fit=crop&q=80&w=800',
+    features: ['95% Filtration', 'Comfort Straps', 'Valved Exhaust'],
+    industrialRating: 'NIOSH N95'
   }
 ];
