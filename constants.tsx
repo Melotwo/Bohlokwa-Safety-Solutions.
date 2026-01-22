@@ -21,7 +21,7 @@ export const PRODUCTS: Product[] = [
     name: 'Pro-Series Red & Black Impact Gloves',
     category: Category.HAND,
     description: 'Heavy-duty protection with TPR impact shields on the knuckles and fingers. Designed for high-risk industrial and mining operations.',
-    image: 'https://images.pexels.com/photos/7362896/pexels-photo-7362896.jpeg',
+    image: 'https://images.pexels.com/photos/8487790/pexels-photo-8487790.jpeg',
     features: ['Vibration Dampening', 'Cut Resistant', 'Superior Grip'],
     industrialRating: 'EN 388:2016'
   },
