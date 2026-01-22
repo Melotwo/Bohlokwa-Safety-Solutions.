@@ -12,7 +12,7 @@ export const PRODUCTS: Product[] = [
     name: 'SABS Approved Yellow Industrial Hard Hat',
     category: Category.HEAD,
     description: 'High-visibility yellow safety helmet with reinforced ribbing for maximum impact resistance. Sourced directly for site safety compliance.',
-    image: https://images.pexels.com/photos/38070/pexels-photo-38070.jpeg$0 ,
+    image: 'https://images.pexels.com/photos/38070/pexels-photo-38070.jpeg',
     features: ['SABS Certified', '6-Point Suspension', 'Shock Resistant Shell'],
     industrialRating: 'SANS 1397'
   },
@@ -21,7 +21,7 @@ export const PRODUCTS: Product[] = [
     name: 'Pro-Series Red & Black Impact Gloves',
     category: Category.HAND,
     description: 'Heavy-duty protection with TPR impact shields on the knuckles and fingers. Designed for high-risk industrial and mining operations.',
-    image: https://images.pexels.com/photos/7362896/pexels-photo-7362896.jpeg$0 ,
+    image: 'https://images.pexels.com/photos/7362896/pexels-photo-7362896.jpeg',
     features: ['Vibration Dampening', 'Cut Resistant', 'Superior Grip'],
     industrialRating: 'EN 388:2016'
   },
@@ -30,7 +30,7 @@ export const PRODUCTS: Product[] = [
     name: 'Passion Hi-Viz Criss Cross Lime Vest',
     category: Category.BODY,
     description: 'Signature criss-cross lime reflective vest. Lightweight mesh with high-intensity reflective tape for 360-degree visibility.',
-    image: https://images.pexels.com/photos/8486979/pexels-photo-8486979.jpeg
+    image: 'https://images.pexels.com/photos/8486979/pexels-photo-8486979.jpeg',
     features: ['Class 2 Visibility', 'Zip & ID Pocket', 'Breathable Mesh'],
     industrialRating: 'EN ISO 20471'
   },
@@ -39,7 +39,7 @@ export const PRODUCTS: Product[] = [
     name: 'Blue Integrated Pro-Protection Set',
     category: Category.MINING,
     description: 'A complete specialized protection kit featuring a reinforced blue hard hat, panoramic clear goggles, and a high-performance valve respirator.',
-    image: https://images.pexels.com/photos/3846183/pexels-photo-3846183.jpeg,
+    image: 'https://images.pexels.com/photos/3846183/pexels-photo-3846183.jpeg',
     features: ['Complete Face Seal', 'Anti-Fog Goggles', 'N95 Valve Mask'],
     industrialRating: 'SANS 20345 Compliant'
   },
@@ -48,7 +48,8 @@ export const PRODUCTS: Product[] = [
     name: 'Clear Wide-View Panoramic Goggles',
     category: Category.EYE,
     description: 'Industrial safety goggles with indirect ventilation and anti-fog coating. Fits comfortably over most prescription eyewear.',
-    image: https://images.pexels.com/photos/7789650/pexels-photo-7789650.jpeg,
+    image: 'https://images.pexels.com/photos/7789650/pexels-photo-7789650.jpeg',
+    features: ['Indirect Ventilation', 'Anti-Fog Coating', 'Prescription Compatible'],
     industrialRating: 'ANSI Z87.1+'
   },
   {
