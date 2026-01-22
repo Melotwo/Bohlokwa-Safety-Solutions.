@@ -3,7 +3,6 @@ import React, { useState } from 'react';
 import { Navbar } from './components/Navbar';
 import { Hero } from './components/Hero';
 import { ProductGrid } from './components/ProductGrid';
-import { AISafetyConsultant } from './components/AISafetyConsultant';
 import { CategoryTabs } from './components/CategoryTabs';
 import { QuoteModal } from './components/QuoteModal';
 import { Footer } from './components/Footer';
@@ -70,7 +69,6 @@ export default function App() {
       </main>
 
       <Footer id="footer" />
-      <AISafetyConsultant />
       
       {isQuoteOpen && (
         <QuoteModal 
