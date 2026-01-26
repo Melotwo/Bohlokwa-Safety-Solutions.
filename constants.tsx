@@ -57,7 +57,7 @@ export const PRODUCTS: Product[] = [
     name: 'Industrial Valve Respirator (N95)',
     category: Category.RESPIRATORY,
     description: 'Superior protection against fine dust and particles. Features a cool-flow valve to reduce heat build-up.',
-    image: 'https://images.unsplash.com/photo-1584622781564-1d9876a13d00?auto=format&fit=crop&q=80&w=800',
+    image: 'https://images.pexels.com/photos/3951628/pexels-photo-3951628.jpeg',
     features: ['95% Filtration', 'Comfort Straps', 'Valved Exhaust'],
     industrialRating: 'NIOSH N95'
   }
