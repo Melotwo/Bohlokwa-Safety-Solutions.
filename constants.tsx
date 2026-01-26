@@ -54,11 +54,11 @@ export const PRODUCTS: Product[] = [
   },
   {
     id: '6',
-    name: 'Industrial Valve Respirator (N95)',
-    category: Category.RESPIRATORY,
-    description: 'Superior protection against fine dust and particles. Features a cool-flow valve to reduce heat build-up.',
-    image: 'https://images.pexels.com/photos/3951628/pexels-photo-3951628.jpeg',
-    features: ['95% Filtration', 'Comfort Straps', 'Valved Exhaust'],
-    industrialRating: 'NIOSH N95'
+    name: 'Premium D59 Flame & Acid Resistant Work Suit',
+    category: Category.BODY,
+    description: 'High-performance industrial boiler suit designed for extreme durability in mining and construction. Features 100% cotton D59 fabric with specialized protective finishes.',
+    image: 'https://images.unsplash.com/photo-1621905251189-08b45d6a269e?auto=format&fit=crop&q=80&w=800',
+    features: ['Flame Retardant', 'Acid Resistant', 'Triple Stitched'],
+    industrialRating: 'SANS 434'
   }
 ];
