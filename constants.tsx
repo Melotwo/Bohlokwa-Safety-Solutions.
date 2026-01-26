@@ -54,11 +54,10 @@ export const PRODUCTS: Product[] = [
   },
   {
     id: '6',
-    name: 'Premium D59 Flame & Acid Resistant Work Suit',
+    name: 'Navy Blue D59 Flame Retardant Work Suit',
     category: Category.BODY,
-    description: 'High-performance industrial boiler suit designed for extreme durability in mining and construction. Features 100% cotton D59 fabric with specialized protective finishes.',
-    image: 'https://images.unsplash.com/photo-1621905251189-08b45d6a269e?auto=format&fit=crop&q=80&w=800',
-    features: ['Flame Retardant', 'Acid Resistant', 'Triple Stitched'],
+    description: 'Premium navy blue industrial work suit. Manufactured from heavy-duty D59 100% cotton with flame retardant and acid resistant finishes. Includes high-visibility silver reflective tape.',
+    image: 'https://images.unsplash.com/photo-1590674258832-6809c95c80a2?auto=format&fit=crop&q=80&w=800',
+    features: ['SANS 434 Approved', 'Flame Retardant', 'Acid Resistant', 'Reflective Tape'],
     industrialRating: 'SANS 434'
   }
-];
