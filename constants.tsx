@@ -54,10 +54,11 @@ export const PRODUCTS: Product[] = [
   },
   {
     id: '6',
-    name: 'Navy Blue D59 Flame Retardant Work Suit',
+    name: 'Navy Blue D59 Flame Retardant Worksuit',
     category: Category.BODY,
-    description: 'Premium navy blue industrial work suit. Manufactured from heavy-duty D59 100% cotton with flame retardant and acid resistant finishes. Includes high-visibility silver reflective tape.',
-    image: 'https://images.unsplash.com/photo-1590674258832-6809c95c80a2?auto=format&fit=crop&q=80&w=800',
+    description: 'Professional-grade navy blue industrial worksuit. Features heavy-duty D59 100% cotton fabric, flame retardant treatment, and high-visibility silver reflective bands for hazardous environments.',
+    image: 'https://encrypted-tbn0.gstatic.com/shopping?q=tbn:ANd9GcQpWz4Ctu9asPDL4d87KIB8U2ZJtcmQ88zgHeiaI5uueERhj8jMixU8WxmAY2MnBDF_2-t7XdLZFKWvq-lDLyfzf1u9kKRM1n95PIhrN0xDsJ0yPBsvwXxfZdS13C5Dd4OJwp4c6CvOH18&usqp=CAc',
     features: ['SANS 434 Approved', 'Flame Retardant', 'Acid Resistant', 'Reflective Tape'],
     industrialRating: 'SANS 434'
   }
+];
