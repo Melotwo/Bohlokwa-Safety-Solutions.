@@ -1,9 +1,13 @@
 import { Category, Product, NavItem } from './types';
 
+// Updated affiliate link based on standard Mine Africa tracking parameters
+export const MINE_AFRICA_AFFILIATE_URL = 'https://mineafrica.co.za/?tracking=bohlokwa';
+
 export const NAV_ITEMS: NavItem[] = [
   { label: 'Our Products', href: '#products' },
   { label: 'Bulk Orders', href: '#quote' },
   { label: 'About Us', href: '#footer' },
+  { label: 'Partner Store', href: MINE_AFRICA_AFFILIATE_URL },
 ];
 
 export const PRODUCTS: Product[] = [
