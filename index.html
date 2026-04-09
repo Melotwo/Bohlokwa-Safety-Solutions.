@@ -20,18 +20,18 @@
     --grey-light: #c5cfe0;
     --border: rgba(255,255,255,0.08);
   }
-
+ 
   *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-
+ 
   html { scroll-behavior: smooth; }
-
+ 
   body {
     font-family: 'DM Sans', sans-serif;
     background: var(--navy);
     color: var(--white);
     overflow-x: hidden;
   }
-
+ 
   /* ---- NAV ---- */
   nav {
     position: fixed;
@@ -47,14 +47,14 @@
     border-bottom: 1px solid var(--border);
     transition: background 0.3s;
   }
-
+ 
   .logo {
     display: flex;
     align-items: center;
     gap: 10px;
     text-decoration: none;
   }
-
+ 
   .logo-mark {
     width: 40px; height: 40px;
     background: var(--orange);
@@ -66,12 +66,12 @@
     color: white;
     flex-shrink: 0;
   }
-
+ 
   .logo-text {
     display: flex; flex-direction: column;
     line-height: 1;
   }
-
+ 
   .logo-name {
     font-family: 'Barlow Condensed', sans-serif;
     font-weight: 800;
@@ -79,7 +79,7 @@
     letter-spacing: 0.02em;
     color: var(--white);
   }
-
+ 
   .logo-sub {
     font-size: 9px;
     letter-spacing: 0.18em;
@@ -87,14 +87,14 @@
     text-transform: uppercase;
     font-weight: 500;
   }
-
+ 
   .nav-links {
     display: flex;
     align-items: center;
     gap: 36px;
     list-style: none;
   }
-
+ 
   .nav-links a {
     color: var(--grey-light);
     text-decoration: none;
@@ -103,10 +103,10 @@
     letter-spacing: 0.02em;
     transition: color 0.2s;
   }
-
+ 
   .nav-links a:hover { color: var(--white); }
   .nav-links a.active { color: var(--orange); }
-
+ 
   .nav-cta {
     background: var(--orange);
     color: white !important;
@@ -115,9 +115,9 @@
     font-weight: 600;
     transition: background 0.2s !important;
   }
-
+ 
   .nav-cta:hover { background: var(--orange-light) !important; color: white !important; }
-
+ 
   .hamburger {
     display: none;
     flex-direction: column;
@@ -125,14 +125,14 @@
     cursor: pointer;
     padding: 4px;
   }
-
+ 
   .hamburger span {
     width: 24px; height: 2px;
     background: var(--white);
     border-radius: 2px;
     transition: 0.3s;
   }
-
+ 
   /* ---- HERO ---- */
   #hero {
     position: relative;
@@ -142,7 +142,7 @@
     overflow: hidden;
     padding: 120px 5% 80px;
   }
-
+ 
   .hero-bg {
     position: absolute;
     inset: 0;
@@ -150,7 +150,7 @@
       linear-gradient(135deg, rgba(13,17,23,0.97) 40%, rgba(13,17,23,0.7) 100%),
       url('https://images.unsplash.com/photo-1504328345606-18bbc8c9d7d1?w=1600&q=80') center/cover no-repeat;
   }
-
+ 
   .hero-grid-overlay {
     position: absolute;
     inset: 0;
@@ -160,7 +160,7 @@
     background-size: 60px 60px;
     pointer-events: none;
   }
-
+ 
   .hero-glow {
     position: absolute;
     top: 20%;
@@ -170,13 +170,13 @@
     background: radial-gradient(circle, rgba(232,93,4,0.12) 0%, transparent 70%);
     pointer-events: none;
   }
-
+ 
   .hero-content {
     position: relative;
     max-width: 680px;
     z-index: 2;
   }
-
+ 
   .badge {
     display: inline-flex;
     align-items: center;
@@ -192,7 +192,7 @@
     text-transform: uppercase;
     margin-bottom: 28px;
   }
-
+ 
   .badge::before {
     content: '';
     width: 6px; height: 6px;
@@ -200,12 +200,12 @@
     border-radius: 50%;
     animation: pulse 2s infinite;
   }
-
+ 
   @keyframes pulse {
     0%, 100% { opacity: 1; transform: scale(1); }
     50% { opacity: 0.5; transform: scale(0.8); }
   }
-
+ 
   h1 {
     font-family: 'Barlow Condensed', sans-serif;
     font-weight: 900;
@@ -215,13 +215,13 @@
     text-transform: uppercase;
     margin-bottom: 20px;
   }
-
+ 
   h1 em {
     font-style: italic;
     color: var(--orange);
     display: block;
   }
-
+ 
   .hero-sub {
     font-size: 15px;
     color: var(--grey-light);
@@ -229,14 +229,14 @@
     max-width: 480px;
     margin-bottom: 12px;
   }
-
+ 
   .hero-certifications {
     display: flex;
     gap: 10px;
     margin-bottom: 36px;
     flex-wrap: wrap;
   }
-
+ 
   .cert-badge {
     font-size: 10px;
     font-weight: 700;
@@ -247,14 +247,14 @@
     color: var(--grey);
     text-transform: uppercase;
   }
-
+ 
   .hero-buttons {
     display: flex;
     gap: 14px;
     flex-wrap: wrap;
     margin-bottom: 52px;
   }
-
+ 
   .btn-primary {
     display: inline-flex;
     align-items: center;
@@ -269,12 +269,12 @@
     letter-spacing: 0.02em;
     transition: background 0.2s, transform 0.2s;
   }
-
+ 
   .btn-primary:hover {
     background: var(--orange-light);
     transform: translateY(-2px);
   }
-
+ 
   .btn-secondary {
     display: inline-flex;
     align-items: center;
@@ -290,19 +290,19 @@
     letter-spacing: 0.02em;
     transition: border-color 0.2s, background 0.2s, transform 0.2s;
   }
-
+ 
   .btn-secondary:hover {
     border-color: var(--orange);
     background: var(--orange-dim);
     transform: translateY(-2px);
   }
-
+ 
   .hero-hotline {
     display: flex;
     align-items: center;
     gap: 14px;
   }
-
+ 
   .hotline-icon {
     width: 44px; height: 44px;
     background: var(--orange-dim);
@@ -313,7 +313,7 @@
     justify-content: center;
     font-size: 18px;
   }
-
+ 
   .hotline-label {
     font-size: 10px;
     letter-spacing: 0.12em;
@@ -321,14 +321,14 @@
     color: var(--orange);
     font-weight: 600;
   }
-
+ 
   .hotline-number {
     font-family: 'Barlow Condensed', sans-serif;
     font-size: 22px;
     font-weight: 800;
     letter-spacing: 0.04em;
   }
-
+ 
   /* ---- TRUST BAR ---- */
   .trust-bar {
     background: var(--navy-mid);
@@ -341,7 +341,7 @@
     gap: 24px;
     flex-wrap: wrap;
   }
-
+ 
   .trust-item {
     display: flex;
     align-items: center;
@@ -350,12 +350,12 @@
     color: var(--grey-light);
     font-weight: 500;
   }
-
+ 
   .trust-icon { font-size: 20px; }
-
+ 
   /* ---- SECTION SHARED ---- */
   section { padding: 96px 5%; }
-
+ 
   .section-label {
     font-size: 11px;
     letter-spacing: 0.2em;
@@ -364,7 +364,7 @@
     font-weight: 700;
     margin-bottom: 12px;
   }
-
+ 
   .section-title {
     font-family: 'Barlow Condensed', sans-serif;
     font-weight: 900;
@@ -374,14 +374,14 @@
     letter-spacing: -0.01em;
     margin-bottom: 16px;
   }
-
+ 
   .section-desc {
     color: var(--grey);
     font-size: 15px;
     line-height: 1.75;
     max-width: 560px;
   }
-
+ 
   .section-header {
     display: flex;
     justify-content: space-between;
@@ -390,16 +390,16 @@
     gap: 24px;
     flex-wrap: wrap;
   }
-
+ 
   /* ---- PRODUCTS ---- */
   #products { background: var(--navy); }
-
+ 
   .products-grid {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
     gap: 20px;
   }
-
+ 
   .product-card {
     background: var(--navy-mid);
     border: 1px solid var(--border);
@@ -411,19 +411,19 @@
     display: flex;
     flex-direction: column;
   }
-
+ 
   .product-card:hover {
     border-color: var(--orange);
     transform: translateY(-4px);
   }
-
+ 
   .product-img {
     width: 100%;
     height: 200px;
     overflow: hidden;
     background: #1a2540;
   }
-
+ 
   .product-img img {
     width: 100%;
     height: 100%;
@@ -431,18 +431,18 @@
     display: block;
     transition: transform 0.4s ease;
   }
-
+ 
   .product-card:hover .product-img img {
     transform: scale(1.06);
   }
-
+ 
   .product-body {
     padding: 20px 22px 24px;
     flex: 1;
     display: flex;
     flex-direction: column;
   }
-
+ 
   .product-tag {
     font-size: 10px;
     letter-spacing: 0.15em;
@@ -451,7 +451,7 @@
     font-weight: 700;
     margin-bottom: 8px;
   }
-
+ 
   .product-name {
     font-family: 'Barlow Condensed', sans-serif;
     font-weight: 800;
@@ -460,7 +460,7 @@
     margin-bottom: 8px;
     letter-spacing: 0.02em;
   }
-
+ 
   .product-desc {
     font-size: 13px;
     color: var(--grey);
@@ -468,7 +468,7 @@
     flex: 1;
     margin-bottom: 18px;
   }
-
+ 
   .product-link {
     display: inline-flex;
     align-items: center;
@@ -479,7 +479,7 @@
     letter-spacing: 0.04em;
     text-transform: uppercase;
   }
-
+ 
   /* ---- MINE AFRICA AFFILIATE BANNER ---- */
   .affiliate-banner {
     background: linear-gradient(135deg, var(--navy-light), var(--navy-mid));
@@ -494,7 +494,7 @@
     margin-top: 52px;
     flex-wrap: wrap;
   }
-
+ 
   .affiliate-text h3 {
     font-family: 'Barlow Condensed', sans-serif;
     font-size: 28px;
@@ -503,25 +503,25 @@
     letter-spacing: 0.02em;
     margin-bottom: 6px;
   }
-
+ 
   .affiliate-text p {
     color: var(--grey);
     font-size: 14px;
     line-height: 1.6;
     max-width: 480px;
   }
-
+ 
   /* ---- SECTORS ---- */
   #sectors {
     background: var(--navy-mid);
   }
-
+ 
   .sectors-grid {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
     gap: 16px;
   }
-
+ 
   .sector-card {
     background: var(--navy);
     border: 1px solid var(--border);
@@ -530,14 +530,14 @@
     transition: border-color 0.3s, background 0.3s;
     cursor: default;
   }
-
+ 
   .sector-card:hover {
     border-color: var(--orange);
     background: var(--orange-dim);
   }
-
+ 
   .sector-icon { font-size: 32px; margin-bottom: 12px; }
-
+ 
   .sector-name {
     font-family: 'Barlow Condensed', sans-serif;
     font-size: 18px;
@@ -546,24 +546,24 @@
     letter-spacing: 0.04em;
     margin-bottom: 6px;
   }
-
+ 
   .sector-desc {
     font-size: 12px;
     color: var(--grey);
     line-height: 1.5;
   }
-
+ 
   /* ---- BULK ORDERS ---- */
   #bulk {
     background: var(--navy);
     text-align: center;
   }
-
+ 
   .bulk-inner {
     max-width: 680px;
     margin: 0 auto;
   }
-
+ 
   .bulk-steps {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
@@ -571,14 +571,14 @@
     margin: 52px 0;
     text-align: left;
   }
-
+ 
   .step {
     background: var(--navy-mid);
     border: 1px solid var(--border);
     border-radius: 10px;
     padding: 24px 20px;
   }
-
+ 
   .step-num {
     font-family: 'Barlow Condensed', sans-serif;
     font-size: 40px;
@@ -588,26 +588,26 @@
     line-height: 1;
     margin-bottom: 10px;
   }
-
+ 
   .step-title {
     font-weight: 700;
     font-size: 14px;
     margin-bottom: 6px;
   }
-
+ 
   .step-desc {
     font-size: 12px;
     color: var(--grey);
     line-height: 1.5;
   }
-
+ 
   .bulk-buttons {
     display: flex;
     gap: 14px;
     justify-content: center;
     flex-wrap: wrap;
   }
-
+ 
   /* ---- ABOUT ---- */
   #about {
     background: var(--navy-mid);
@@ -616,23 +616,23 @@
     gap: 80px;
     align-items: center;
   }
-
+ 
   @media (max-width: 860px) {
     #about { grid-template-columns: 1fr; gap: 40px; }
   }
-
+ 
   .about-stats {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 2px;
     margin-top: 40px;
   }
-
+ 
   .stat {
     background: var(--navy);
     padding: 24px 20px;
   }
-
+ 
   .stat-num {
     font-family: 'Barlow Condensed', sans-serif;
     font-size: 40px;
@@ -641,18 +641,18 @@
     line-height: 1;
     margin-bottom: 4px;
   }
-
+ 
   .stat-label {
     font-size: 12px;
     color: var(--grey);
     text-transform: uppercase;
     letter-spacing: 0.08em;
   }
-
+ 
   .about-img-block {
     position: relative;
   }
-
+ 
   .about-img {
     width: 100%;
     aspect-ratio: 4/3;
@@ -665,13 +665,13 @@
     font-size: 80px;
     overflow: hidden;
   }
-
+ 
   .about-img img {
     width: 100%;
     height: 100%;
     object-fit: cover;
   }
-
+ 
   .about-accent {
     position: absolute;
     bottom: -20px;
@@ -682,31 +682,31 @@
     border-radius: 12px;
     z-index: -1;
   }
-
+ 
   /* ---- CONTACT ---- */
   #contact {
     background: var(--navy);
   }
-
+ 
   .contact-grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 60px;
     align-items: start;
   }
-
+ 
   @media (max-width: 760px) {
     .contact-grid { grid-template-columns: 1fr; gap: 40px; }
   }
-
+ 
   .contact-info > * + * { margin-top: 28px; }
-
+ 
   .contact-item {
     display: flex;
     gap: 16px;
     align-items: flex-start;
   }
-
+ 
   .contact-icon {
     width: 44px; height: 44px;
     background: var(--orange-dim);
@@ -718,7 +718,7 @@
     font-size: 18px;
     flex-shrink: 0;
   }
-
+ 
   .contact-label {
     font-size: 10px;
     letter-spacing: 0.15em;
@@ -727,19 +727,19 @@
     font-weight: 700;
     margin-bottom: 4px;
   }
-
+ 
   .contact-value {
     font-weight: 600;
     font-size: 15px;
   }
-
+ 
   .contact-form {
     background: var(--navy-mid);
     border: 1px solid var(--border);
     border-radius: 12px;
     padding: 36px;
   }
-
+ 
   .form-title {
     font-family: 'Barlow Condensed', sans-serif;
     font-size: 24px;
@@ -748,9 +748,9 @@
     letter-spacing: 0.04em;
     margin-bottom: 24px;
   }
-
+ 
   .form-group { margin-bottom: 16px; }
-
+ 
   .form-group label {
     display: block;
     font-size: 11px;
@@ -760,7 +760,7 @@
     font-weight: 600;
     margin-bottom: 6px;
   }
-
+ 
   .form-group input,
   .form-group select,
   .form-group textarea {
@@ -775,29 +775,29 @@
     outline: none;
     transition: border-color 0.2s;
   }
-
+ 
   .form-group input:focus,
   .form-group select:focus,
   .form-group textarea:focus {
     border-color: var(--orange);
   }
-
+ 
   .form-group select option { background: var(--navy-mid); }
   .form-group textarea { resize: vertical; min-height: 100px; }
-
+ 
   .form-row {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 14px;
   }
-
+ 
   /* ---- FOOTER ---- */
   footer {
     background: var(--navy-mid);
     border-top: 1px solid var(--border);
     padding: 60px 5% 30px;
   }
-
+ 
   .footer-grid {
     display: grid;
     grid-template-columns: 2fr 1fr 1fr 1.4fr;
@@ -805,22 +805,22 @@
     margin-bottom: 52px;
     flex-wrap: wrap;
   }
-
+ 
   @media (max-width: 900px) {
     .footer-grid { grid-template-columns: 1fr 1fr; }
   }
-
+ 
   @media (max-width: 520px) {
     .footer-grid { grid-template-columns: 1fr; }
   }
-
+ 
   .footer-about p {
     color: var(--grey);
     font-size: 13px;
     line-height: 1.75;
     margin-top: 16px;
   }
-
+ 
   .footer-col h4 {
     font-size: 10px;
     letter-spacing: 0.2em;
@@ -829,7 +829,7 @@
     font-weight: 700;
     margin-bottom: 18px;
   }
-
+ 
   .footer-col ul { list-style: none; }
   .footer-col ul li { margin-bottom: 10px; }
   .footer-col ul li a {
@@ -839,14 +839,14 @@
     transition: color 0.2s;
   }
   .footer-col ul li a:hover { color: var(--orange); }
-
+ 
   .newsletter-form {
     margin-top: 12px;
     display: flex;
     flex-direction: column;
     gap: 10px;
   }
-
+ 
   .newsletter-form input {
     background: var(--navy);
     border: 1px solid var(--border);
@@ -857,9 +857,9 @@
     font-size: 13px;
     outline: none;
   }
-
+ 
   .newsletter-form input:focus { border-color: var(--orange); }
-
+ 
   .newsletter-form button {
     background: var(--orange);
     color: white;
@@ -873,9 +873,9 @@
     cursor: pointer;
     transition: background 0.2s;
   }
-
+ 
   .newsletter-form button:hover { background: var(--orange-light); }
-
+ 
   .footer-bottom {
     border-top: 1px solid var(--border);
     padding-top: 28px;
@@ -885,17 +885,17 @@
     gap: 16px;
     flex-wrap: wrap;
   }
-
+ 
   .footer-bottom p {
     color: var(--grey);
     font-size: 12px;
   }
-
+ 
   .footer-social {
     display: flex;
     gap: 12px;
   }
-
+ 
   .social-btn {
     width: 36px; height: 36px;
     border: 1px solid var(--border);
@@ -906,12 +906,12 @@
     color: var(--grey);
     transition: border-color 0.2s, color 0.2s;
   }
-
+ 
   .social-btn:hover {
     border-color: var(--orange);
     color: var(--orange);
   }
-
+ 
   /* ---- QUOTE MODAL ---- */
   .modal-overlay {
     display: none;
@@ -923,9 +923,9 @@
     justify-content: center;
     padding: 20px;
   }
-
+ 
   .modal-overlay.open { display: flex; }
-
+ 
   .modal {
     background: var(--navy-mid);
     border: 1px solid var(--border);
@@ -937,7 +937,7 @@
     padding: 40px;
     position: relative;
   }
-
+ 
   .modal-close {
     position: absolute;
     top: 20px; right: 20px;
@@ -951,9 +951,9 @@
     display: flex; align-items: center; justify-content: center;
     transition: border-color 0.2s, color 0.2s;
   }
-
+ 
   .modal-close:hover { border-color: var(--orange); color: var(--orange); }
-
+ 
   /* ---- ANIMATIONS ---- */
   /* js-ready added by JS — ensures content always shows even if observer fails */
   .js-ready .fade-up {
@@ -968,7 +968,7 @@
   .delay-1 { transition-delay: 0.1s; }
   .delay-2 { transition-delay: 0.2s; }
   .delay-3 { transition-delay: 0.3s; }
-
+ 
   /* ---- MOBILE NAV ---- */
   .mobile-menu {
     display: none;
@@ -981,9 +981,9 @@
     flex-direction: column;
     gap: 20px;
   }
-
+ 
   .mobile-menu.open { display: flex; }
-
+ 
   .mobile-menu a {
     color: var(--grey-light);
     text-decoration: none;
@@ -992,28 +992,28 @@
     padding: 10px 0;
     border-bottom: 1px solid var(--border);
   }
-
+ 
   .mobile-menu a:last-child { border-bottom: none; }
-
+ 
   /* ---- RESPONSIVE ---- */
   @media (max-width: 768px) {
     .nav-links { display: none; }
     .hamburger { display: flex; }
-
+ 
     #hero { padding: 100px 5% 60px; }
-
+ 
     .trust-bar { gap: 12px; }
     .trust-item:nth-child(n+4) { display: none; }
-
+ 
     .footer-grid { grid-template-columns: 1fr 1fr; }
     .form-row { grid-template-columns: 1fr; }
-
+ 
     #about { padding: 60px 5%; }
     section { padding: 64px 5%; }
-
+ 
     .products-grid { grid-template-columns: 1fr 1fr; }
   }
-
+ 
   @media (max-width: 480px) {
     .products-grid { grid-template-columns: 1fr; }
     .sectors-grid { grid-template-columns: 1fr 1fr; }
@@ -1021,7 +1021,7 @@
 </style>
 </head>
 <body>
-
+ 
 <!-- NAV -->
 <nav id="navbar">
   <a href="#hero" class="logo">
@@ -1043,7 +1043,7 @@
     <span></span><span></span><span></span>
   </div>
 </nav>
-
+ 
 <!-- MOBILE MENU -->
 <div class="mobile-menu" id="mobileMenu">
   <a href="#products" onclick="toggleMobile()">Our Products</a>
@@ -1053,7 +1053,7 @@
   <a href="https://mineafrica.co.za/Weekly-Specials?ref=pPuyfECz9SHZrRc3w6zFwfW2f5yYo8LiN2hys3dTZKlSJrY2ypA72w21manqCKOA" target="_blank">Partner Store</a>
   <a href="#" onclick="openModal(); toggleMobile()" style="color: var(--orange); font-weight: 700;">Get a Quote</a>
 </div>
-
+ 
 <!-- HERO -->
 <section id="hero">
   <div class="hero-bg"></div>
@@ -1082,7 +1082,7 @@
     </div>
   </div>
 </section>
-
+ 
 <!-- TRUST BAR -->
 <div class="trust-bar">
   <div class="trust-item"><span class="trust-icon">🛡️</span> SABS-Approved Gear</div>
@@ -1091,7 +1091,7 @@
   <div class="trust-item"><span class="trust-icon">🤝</span> Mine Africa Official Partner</div>
   <div class="trust-item"><span class="trust-icon">⚡</span> Fast Turnaround</div>
 </div>
-
+ 
 <!-- PRODUCTS -->
 <section id="products">
   <div class="section-header fade-up">
@@ -1101,9 +1101,9 @@
     </div>
     <p class="section-desc">Sourced from leading manufacturers including Mine Africa, U-Safety Solutions and regional distributors. Every product certified for South Africa's most demanding sectors.</p>
   </div>
-
+ 
   <div class="products-grid">
-
+ 
     <a href="https://mineafrica.co.za/Weekly-Specials?ref=pPuyfECz9SHZrRc3w6zFwfW2f5yYo8LiN2hys3dTZKlSJrY2ypA72w21manqCKOA" target="_blank" class="product-card fade-up">
       <div class="product-img">
         <img src="https://images.pexels.com/photos/8960996/pexels-photo-8960996.jpeg?auto=compress&cs=tinysrgb&w=600&h=400&fit=crop&fp-y=0.3" alt="Worker wearing yellow hard hat on construction site">
@@ -1115,10 +1115,10 @@
         <span class="product-link">View Range →</span>
       </div>
     </a>
-
+ 
     <a href="https://mineafrica.co.za/Weekly-Specials?ref=pPuyfECz9SHZrRc3w6zFwfW2f5yYo8LiN2hys3dTZKlSJrY2ypA72w21manqCKOA" target="_blank" class="product-card fade-up delay-1">
       <div class="product-img">
-        <img src="https://images.pexels.com/photos/1464625/pexels-photo-1464625.jpeg?auto=compress&cs=tinysrgb&w=600&h=400&fit=crop" alt="Steel toe safety boots on site">
+        <img src="https://drive.google.com/uc?export=view&id=1z5bqdJkmZ_RpE9WWPaMCX8HDkIV7M2j7" alt="Safety boots and gumboots" onerror="this.onerror=null;this.src='https://images.pexels.com/photos/1464625/pexels-photo-1464625.jpeg?auto=compress&cs=tinysrgb&w=600&h=400&fit=crop'">
       </div>
       <div class="product-body">
         <div class="product-tag">Foot Protection</div>
@@ -1127,10 +1127,10 @@
         <span class="product-link">View Range →</span>
       </div>
     </a>
-
+ 
     <a href="https://mineafrica.co.za/Weekly-Specials?ref=pPuyfECz9SHZrRc3w6zFwfW2f5yYo8LiN2hys3dTZKlSJrY2ypA72w21manqCKOA" target="_blank" class="product-card fade-up delay-2">
       <div class="product-img">
-        <img src="https://images.pexels.com/photos/3862627/pexels-photo-3862627.jpeg?auto=compress&cs=tinysrgb&w=600&h=400&fit=crop" alt="Construction worker wearing protective safety gloves">
+        <img src="https://drive.google.com/uc?export=view&id=1oQW155Nw8MXmzJra_U4PDgHYaQBcGHmg" alt="Industrial safety gloves and gauntlets" onerror="this.onerror=null;this.src='https://images.pexels.com/photos/3862627/pexels-photo-3862627.jpeg?auto=compress&cs=tinysrgb&w=600&h=400&fit=crop'">
       </div>
       <div class="product-body">
         <div class="product-tag">Hand Protection</div>
@@ -1139,10 +1139,10 @@
         <span class="product-link">View Range →</span>
       </div>
     </a>
-
+ 
     <a href="https://mineafrica.co.za/Weekly-Specials?ref=pPuyfECz9SHZrRc3w6zFwfW2f5yYo8LiN2hys3dTZKlSJrY2ypA72w21manqCKOA" target="_blank" class="product-card fade-up">
       <div class="product-img">
-        <img src="https://images.pexels.com/photos/3825517/pexels-photo-3825517.jpeg?auto=compress&cs=tinysrgb&w=600&h=400&fit=crop" alt="Worker wearing industrial half-face respirator mask">
+        <img src="https://drive.google.com/uc?export=view&id=1sjihAtJ3eHLBrSyv8zvpYrQyS01rW0sy" alt="Industrial dust masks and respirators" onerror="this.onerror=null;this.src='https://images.pexels.com/photos/3825517/pexels-photo-3825517.jpeg?auto=compress&cs=tinysrgb&w=600&h=400&fit=crop'">
       </div>
       <div class="product-body">
         <div class="product-tag">Respiratory Protection</div>
@@ -1151,10 +1151,10 @@
         <span class="product-link">View Range →</span>
       </div>
     </a>
-
+ 
     <a href="https://mineafrica.co.za/Weekly-Specials?ref=pPuyfECz9SHZrRc3w6zFwfW2f5yYo8LiN2hys3dTZKlSJrY2ypA72w21manqCKOA" target="_blank" class="product-card fade-up delay-1">
       <div class="product-img">
-        <img src="https://images.pexels.com/photos/2760241/pexels-photo-2760241.jpeg?auto=compress&cs=tinysrgb&w=600&h=400&fit=crop" alt="Worker wearing safety goggles and hard hat on site">
+        <img src="https://drive.google.com/uc?export=view&id=1uvJEMEPEZ3G1y6PJEj_30TESef-v1_v-" alt="Safety glasses and visors" onerror="this.onerror=null;this.src='https://images.pexels.com/photos/2760241/pexels-photo-2760241.jpeg?auto=compress&cs=tinysrgb&w=600&h=400&fit=crop'">
       </div>
       <div class="product-body">
         <div class="product-tag">Eye & Face Protection</div>
@@ -1163,10 +1163,10 @@
         <span class="product-link">View Range →</span>
       </div>
     </a>
-
+ 
     <a href="https://mineafrica.co.za/Weekly-Specials?ref=pPuyfECz9SHZrRc3w6zFwfW2f5yYo8LiN2hys3dTZKlSJrY2ypA72w21manqCKOA" target="_blank" class="product-card fade-up delay-2">
       <div class="product-img">
-        <img src="https://images.pexels.com/photos/2566581/pexels-photo-2566581.jpeg?auto=compress&cs=tinysrgb&w=600&h=400&fit=crop" alt="Welder wearing hi-vis coveralls and full protective gear">
+        <img src="https://drive.google.com/uc?export=view&id=1YE913QVu-iqFWa8EMIhOR5rt3L-wFkkV" alt="Coveralls and hi-vis workwear" onerror="this.onerror=null;this.src='https://images.pexels.com/photos/2566581/pexels-photo-2566581.jpeg?auto=compress&cs=tinysrgb&w=600&h=400&fit=crop'">
       </div>
       <div class="product-body">
         <div class="product-tag">Body Protection</div>
@@ -1175,10 +1175,10 @@
         <span class="product-link">View Range →</span>
       </div>
     </a>
-
+ 
     <a href="https://mineafrica.co.za/Weekly-Specials?ref=pPuyfECz9SHZrRc3w6zFwfW2f5yYo8LiN2hys3dTZKlSJrY2ypA72w21manqCKOA" target="_blank" class="product-card fade-up">
       <div class="product-img">
-        <img src="https://images.pexels.com/photos/3760958/pexels-photo-3760958.jpeg?auto=compress&cs=tinysrgb&w=600&h=400&fit=crop" alt="Worker wearing industrial ear defenders on noisy site">
+        <img src="https://drive.google.com/uc?export=view&id=1UJAi53A10R93Yo0VsIvZ9fUj0k7Kpyu_" alt="Earplugs and industrial earmuffs" onerror="this.onerror=null;this.src='https://images.pexels.com/photos/3760958/pexels-photo-3760958.jpeg?auto=compress&cs=tinysrgb&w=600&h=400&fit=crop'">
       </div>
       <div class="product-body">
         <div class="product-tag">Hearing Protection</div>
@@ -1187,10 +1187,10 @@
         <span class="product-link">View Range →</span>
       </div>
     </a>
-
+ 
     <a href="https://mineafrica.co.za/Weekly-Specials?ref=pPuyfECz9SHZrRc3w6zFwfW2f5yYo8LiN2hys3dTZKlSJrY2ypA72w21manqCKOA" target="_blank" class="product-card fade-up delay-1">
       <div class="product-img">
-        <img src="https://images.pexels.com/photos/1078884/pexels-photo-1078884.jpeg?auto=compress&cs=tinysrgb&w=600&h=400&fit=crop" alt="Worker in full body safety harness working at height">
+        <img src="https://drive.google.com/uc?export=view&id=1ggD3mt5x5MkrTtm4Lv6TvYQC6mIHcNnA" alt="Safety harness and lanyards for fall protection" onerror="this.onerror=null;this.src='https://images.pexels.com/photos/1078884/pexels-photo-1078884.jpeg?auto=compress&cs=tinysrgb&w=600&h=400&fit=crop'">
       </div>
       <div class="product-body">
         <div class="product-tag">Fall Protection</div>
@@ -1199,9 +1199,9 @@
         <span class="product-link">View Range →</span>
       </div>
     </a>
-
+ 
   </div>
-
+ 
   <!-- Mine Africa Affiliate Banner -->
   <div class="affiliate-banner fade-up">
     <div class="affiliate-text">
@@ -1211,7 +1211,7 @@
     <a href="https://mineafrica.co.za/Weekly-Specials?ref=pPuyfECz9SHZrRc3w6zFwfW2f5yYo8LiN2hys3dTZKlSJrY2ypA72w21manqCKOA" target="_blank" class="btn-primary" style="white-space: nowrap;">Full Mine Africa Catalogue ↗</a>
   </div>
 </section>
-
+ 
 <!-- SECTORS -->
 <section id="sectors">
   <div class="section-header fade-up">
@@ -1254,14 +1254,14 @@
     </div>
   </div>
 </section>
-
+ 
 <!-- BULK ORDERS -->
 <section id="bulk">
   <div class="bulk-inner">
     <div class="section-label fade-up">For Corporates & Contractors</div>
     <h2 class="section-title fade-up">Bulk Safety<br>Procurement</h2>
     <p class="section-desc fade-up" style="margin: 0 auto 0;">Bohlokwa Safety Solutions, in partnership with Mine Africa, streamlines your bulk procurement. SABS-approved gear delivered directly to your site — from 10 units to 10,000.</p>
-
+ 
     <div class="bulk-steps">
       <div class="step fade-up">
         <div class="step-num">01</div>
@@ -1279,14 +1279,14 @@
         <p class="step-desc">SABS-compliant gear delivered directly to your site anywhere in South Africa.</p>
       </div>
     </div>
-
+ 
     <div class="bulk-buttons">
       <a href="#" class="btn-primary" onclick="openModal()">Request Corporate Quote</a>
       <a href="tel:+27729159871" class="btn-secondary">📞 +27 72 915 9871</a>
     </div>
   </div>
 </section>
-
+ 
 <!-- ABOUT -->
 <section id="about">
   <div>
@@ -1313,7 +1313,7 @@
       </div>
     </div>
   </div>
-
+ 
   <div class="about-img-block fade-up">
     <div class="about-img">
       <img src="https://images.unsplash.com/photo-1581578731548-c64695cc6952?w=800&q=80" alt="Industrial safety workers" onerror="this.parentElement.innerHTML='⚙️'">
@@ -1321,7 +1321,7 @@
     <div class="about-accent"></div>
   </div>
 </section>
-
+ 
 <!-- CONTACT -->
 <section id="contact">
   <div class="section-header fade-up">
@@ -1331,7 +1331,7 @@
     </div>
     <p class="section-desc">Whether you need a quick quote or a full site procurement plan — we're ready. Reach out via any channel below.</p>
   </div>
-
+ 
   <div class="contact-grid">
     <div class="contact-info fade-up">
       <div class="contact-item">
@@ -1365,7 +1365,7 @@
           <div class="contact-value">Mon – Fri: 08:00 – 17:00</div>
         </div>
       </div>
-
+ 
       <div style="margin-top: 16px;">
         <div class="section-label" style="margin-bottom: 14px;">Sourcing Partners</div>
         <div style="display: flex; flex-direction: column; gap: 10px;">
@@ -1375,7 +1375,7 @@
         </div>
       </div>
     </div>
-
+ 
     <div class="contact-form fade-up delay-1">
       <div class="form-title">Request a Quote</div>
       <div class="form-row">
@@ -1424,7 +1424,7 @@
     </div>
   </div>
 </section>
-
+ 
 <!-- FOOTER -->
 <footer>
   <div class="footer-grid">
@@ -1438,7 +1438,7 @@
       </a>
       <p>Official supplier of premium industrial protective equipment. Bohlokwa Safety Solutions — Protecting Africa's workforce in partnership with Mine Africa.</p>
     </div>
-
+ 
     <div class="footer-col">
       <h4>Sourcing Partners</h4>
       <ul>
@@ -1447,7 +1447,7 @@
         <li><a href="#">Regional Distributors</a></li>
       </ul>
     </div>
-
+ 
     <div class="footer-col">
       <h4>Quick Links</h4>
       <ul>
@@ -1458,7 +1458,7 @@
         <li><a href="#contact">Contact</a></li>
       </ul>
     </div>
-
+ 
     <div class="footer-col">
       <h4>Client Portal</h4>
       <p style="color: var(--grey); font-size: 13px; line-height: 1.6; margin-bottom: 14px;">Get the latest SABS regulation updates and new gear releases directly to your inbox.</p>
@@ -1468,7 +1468,7 @@
       </div>
     </div>
   </div>
-
+ 
   <div class="footer-bottom">
     <p>© 2025 Bohlokwa Safety Solutions. All rights reserved. | Gauteng, South Africa</p>
     <div style="display: flex; align-items: center; gap: 20px; flex-wrap: wrap;">
@@ -1484,7 +1484,7 @@
     </div>
   </div>
 </footer>
-
+ 
 <!-- QUOTE MODAL -->
 <div class="modal-overlay" id="quoteModal" onclick="closeModalOutside(event)">
   <div class="modal">
@@ -1516,29 +1516,29 @@
     <button class="btn-primary" style="width: 100%; justify-content: center; border: none; cursor: pointer;" onclick="handleFormSubmit(event)">Send Request →</button>
   </div>
 </div>
-
+ 
 <script>
   // Add js-ready so fade-up CSS activates only when JS is running
   document.body.classList.add('js-ready');
-
+ 
   // Mark all fade-up elements as visible immediately as a fallback
   // then let IntersectionObserver handle the animation properly
   function makeAllVisible() {
     document.querySelectorAll('.fade-up').forEach(el => el.classList.add('visible'));
   }
-
+ 
   // Scroll animations — use threshold 0 so items never get "stuck" invisible
   const observer = new IntersectionObserver((entries) => {
     entries.forEach(e => {
       if (e.isIntersecting) e.target.classList.add('visible');
     });
   }, { threshold: 0, rootMargin: '0px 0px -40px 0px' });
-
+ 
   document.querySelectorAll('.fade-up').forEach(el => observer.observe(el));
-
+ 
   // Safety net: after 1.5s make everything visible regardless
   setTimeout(makeAllVisible, 1500);
-
+ 
   // Nav scroll effect
   window.addEventListener('scroll', () => {
     const nav = document.getElementById('navbar');
@@ -1546,27 +1546,27 @@
       ? 'rgba(13,17,23,0.98)'
       : 'rgba(13,17,23,0.92)';
   });
-
+ 
   // Mobile menu
   function toggleMobile() {
     document.getElementById('mobileMenu').classList.toggle('open');
   }
-
+ 
   // Modal
   function openModal() {
     document.getElementById('quoteModal').classList.add('open');
     document.body.style.overflow = 'hidden';
   }
-
+ 
   function closeModal() {
     document.getElementById('quoteModal').classList.remove('open');
     document.body.style.overflow = '';
   }
-
+ 
   function closeModalOutside(e) {
     if (e.target === document.getElementById('quoteModal')) closeModal();
   }
-
+ 
   // Form submission placeholder
   function handleFormSubmit(e) {
     e.preventDefault();
