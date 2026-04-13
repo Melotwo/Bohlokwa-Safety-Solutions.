@@ -20,1009 +20,148 @@
     --grey-light: #c5cfe0;
     --border: rgba(255,255,255,0.08);
   }
- 
   *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
- 
   html { scroll-behavior: smooth; }
- 
-  body {
-    font-family: 'DM Sans', sans-serif;
-    background: var(--navy);
-    color: var(--white);
-    overflow-x: hidden;
-  }
- 
-  /* ---- NAV ---- */
-  nav {
-    position: fixed;
-    top: 0; left: 0; right: 0;
-    z-index: 1000;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 0 5%;
-    height: 72px;
-    background: rgba(13,17,23,0.92);
-    backdrop-filter: blur(12px);
-    border-bottom: 1px solid var(--border);
-    transition: background 0.3s;
-  }
- 
-  .logo {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    text-decoration: none;
-  }
- 
-  .logo-mark {
-    width: 40px; height: 40px;
-    background: var(--orange);
-    border-radius: 8px;
-    display: flex; align-items: center; justify-content: center;
-    font-family: 'Barlow Condensed', sans-serif;
-    font-weight: 900;
-    font-size: 18px;
-    color: white;
-    flex-shrink: 0;
-  }
- 
-  .logo-text {
-    display: flex; flex-direction: column;
-    line-height: 1;
-  }
- 
-  .logo-name {
-    font-family: 'Barlow Condensed', sans-serif;
-    font-weight: 800;
-    font-size: 20px;
-    letter-spacing: 0.02em;
-    color: var(--white);
-  }
- 
-  .logo-sub {
-    font-size: 9px;
-    letter-spacing: 0.18em;
-    color: var(--grey);
-    text-transform: uppercase;
-    font-weight: 500;
-  }
- 
-  .nav-links {
-    display: flex;
-    align-items: center;
-    gap: 36px;
-    list-style: none;
-  }
- 
-  .nav-links a {
-    color: var(--grey-light);
-    text-decoration: none;
-    font-size: 14px;
-    font-weight: 500;
-    letter-spacing: 0.02em;
-    transition: color 0.2s;
-  }
- 
+  body { font-family: 'DM Sans', sans-serif; background: var(--navy); color: var(--white); overflow-x: hidden; }
+  nav { position: fixed; top: 0; left: 0; right: 0; z-index: 1000; display: flex; align-items: center; justify-content: space-between; padding: 0 5%; height: 72px; background: rgba(13,17,23,0.92); backdrop-filter: blur(12px); border-bottom: 1px solid var(--border); transition: background 0.3s; }
+  .logo { display: flex; align-items: center; gap: 10px; text-decoration: none; }
+  .logo-mark { width: 40px; height: 40px; background: var(--orange); border-radius: 8px; display: flex; align-items: center; justify-content: center; font-family: 'Barlow Condensed', sans-serif; font-weight: 900; font-size: 18px; color: white; flex-shrink: 0; }
+  .logo-text { display: flex; flex-direction: column; line-height: 1; }
+  .logo-name { font-family: 'Barlow Condensed', sans-serif; font-weight: 800; font-size: 20px; letter-spacing: 0.02em; color: var(--white); }
+  .logo-sub { font-size: 9px; letter-spacing: 0.18em; color: var(--grey); text-transform: uppercase; font-weight: 500; }
+  .nav-links { display: flex; align-items: center; gap: 36px; list-style: none; }
+  .nav-links a { color: var(--grey-light); text-decoration: none; font-size: 14px; font-weight: 500; letter-spacing: 0.02em; transition: color 0.2s; }
   .nav-links a:hover { color: var(--white); }
-  .nav-links a.active { color: var(--orange); }
- 
-  .nav-cta {
-    background: var(--orange);
-    color: white !important;
-    padding: 10px 22px;
-    border-radius: 6px;
-    font-weight: 600;
-    transition: background 0.2s !important;
-  }
- 
-  .nav-cta:hover { background: var(--orange-light) !important; color: white !important; }
- 
-  .hamburger {
-    display: none;
-    flex-direction: column;
-    gap: 5px;
-    cursor: pointer;
-    padding: 4px;
-  }
- 
-  .hamburger span {
-    width: 24px; height: 2px;
-    background: var(--white);
-    border-radius: 2px;
-    transition: 0.3s;
-  }
- 
-  /* ---- HERO ---- */
-  #hero {
-    position: relative;
-    min-height: 100vh;
-    display: flex;
-    align-items: center;
-    overflow: hidden;
-    padding: 120px 5% 80px;
-  }
- 
-  .hero-bg {
-    position: absolute;
-    inset: 0;
-    background:
-      linear-gradient(135deg, rgba(13,17,23,0.97) 40%, rgba(13,17,23,0.7) 100%),
-      url('https://images.unsplash.com/photo-1504328345606-18bbc8c9d7d1?w=1600&q=80') center/cover no-repeat;
-  }
- 
-  .hero-grid-overlay {
-    position: absolute;
-    inset: 0;
-    background-image:
-      linear-gradient(rgba(232,93,4,0.04) 1px, transparent 1px),
-      linear-gradient(90deg, rgba(232,93,4,0.04) 1px, transparent 1px);
-    background-size: 60px 60px;
-    pointer-events: none;
-  }
- 
-  .hero-glow {
-    position: absolute;
-    top: 20%;
-    right: 15%;
-    width: 500px;
-    height: 500px;
-    background: radial-gradient(circle, rgba(232,93,4,0.12) 0%, transparent 70%);
-    pointer-events: none;
-  }
- 
-  .hero-content {
-    position: relative;
-    max-width: 680px;
-    z-index: 2;
-  }
- 
-  .badge {
-    display: inline-flex;
-    align-items: center;
-    gap: 8px;
-    background: var(--orange-dim);
-    border: 1px solid rgba(232,93,4,0.4);
-    border-radius: 100px;
-    padding: 6px 14px;
-    font-size: 11px;
-    font-weight: 600;
-    letter-spacing: 0.12em;
-    color: var(--orange);
-    text-transform: uppercase;
-    margin-bottom: 28px;
-  }
- 
-  .badge::before {
-    content: '';
-    width: 6px; height: 6px;
-    background: var(--orange);
-    border-radius: 50%;
-    animation: pulse 2s infinite;
-  }
- 
-  @keyframes pulse {
-    0%, 100% { opacity: 1; transform: scale(1); }
-    50% { opacity: 0.5; transform: scale(0.8); }
-  }
- 
-  h1 {
-    font-family: 'Barlow Condensed', sans-serif;
-    font-weight: 900;
-    font-size: clamp(52px, 8vw, 96px);
-    line-height: 0.92;
-    letter-spacing: -0.01em;
-    text-transform: uppercase;
-    margin-bottom: 20px;
-  }
- 
-  h1 em {
-    font-style: italic;
-    color: var(--orange);
-    display: block;
-  }
- 
-  .hero-sub {
-    font-size: 15px;
-    color: var(--grey-light);
-    line-height: 1.7;
-    max-width: 480px;
-    margin-bottom: 12px;
-  }
- 
-  .hero-certifications {
-    display: flex;
-    gap: 10px;
-    margin-bottom: 36px;
-    flex-wrap: wrap;
-  }
- 
-  .cert-badge {
-    font-size: 10px;
-    font-weight: 700;
-    letter-spacing: 0.1em;
-    border: 1px solid var(--border);
-    padding: 4px 10px;
-    border-radius: 4px;
-    color: var(--grey);
-    text-transform: uppercase;
-  }
- 
-  .hero-buttons {
-    display: flex;
-    gap: 14px;
-    flex-wrap: wrap;
-    margin-bottom: 52px;
-  }
- 
-  .btn-primary {
-    display: inline-flex;
-    align-items: center;
-    gap: 10px;
-    background: var(--orange);
-    color: white;
-    padding: 15px 28px;
-    border-radius: 6px;
-    font-weight: 700;
-    font-size: 14px;
-    text-decoration: none;
-    letter-spacing: 0.02em;
-    transition: background 0.2s, transform 0.2s;
-  }
- 
-  .btn-primary:hover {
-    background: var(--orange-light);
-    transform: translateY(-2px);
-  }
- 
-  .btn-secondary {
-    display: inline-flex;
-    align-items: center;
-    gap: 10px;
-    background: transparent;
-    color: white;
-    padding: 15px 28px;
-    border-radius: 6px;
-    border: 1.5px solid rgba(255,255,255,0.25);
-    font-weight: 600;
-    font-size: 14px;
-    text-decoration: none;
-    letter-spacing: 0.02em;
-    transition: border-color 0.2s, background 0.2s, transform 0.2s;
-  }
- 
-  .btn-secondary:hover {
-    border-color: var(--orange);
-    background: var(--orange-dim);
-    transform: translateY(-2px);
-  }
- 
-  .hero-hotline {
-    display: flex;
-    align-items: center;
-    gap: 14px;
-  }
- 
-  .hotline-icon {
-    width: 44px; height: 44px;
-    background: var(--orange-dim);
-    border: 1px solid rgba(232,93,4,0.3);
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 18px;
-  }
- 
-  .hotline-label {
-    font-size: 10px;
-    letter-spacing: 0.12em;
-    text-transform: uppercase;
-    color: var(--orange);
-    font-weight: 600;
-  }
- 
-  .hotline-number {
-    font-family: 'Barlow Condensed', sans-serif;
-    font-size: 22px;
-    font-weight: 800;
-    letter-spacing: 0.04em;
-  }
- 
-  /* ---- TRUST BAR ---- */
-  .trust-bar {
-    background: var(--navy-mid);
-    border-top: 1px solid var(--border);
-    border-bottom: 1px solid var(--border);
-    padding: 20px 5%;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 24px;
-    flex-wrap: wrap;
-  }
- 
-  .trust-item {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    font-size: 13px;
-    color: var(--grey-light);
-    font-weight: 500;
-  }
- 
+  .nav-cta { background: var(--orange); color: white !important; padding: 10px 22px; border-radius: 6px; font-weight: 600; transition: background 0.2s !important; }
+  .nav-cta:hover { background: var(--orange-light) !important; }
+  .hamburger { display: none; flex-direction: column; gap: 5px; cursor: pointer; padding: 4px; }
+  .hamburger span { width: 24px; height: 2px; background: var(--white); border-radius: 2px; transition: 0.3s; }
+  #hero { position: relative; min-height: 100vh; display: flex; align-items: center; overflow: hidden; padding: 120px 5% 80px; }
+  .hero-bg { position: absolute; inset: 0; background: linear-gradient(135deg, rgba(13,17,23,0.97) 40%, rgba(13,17,23,0.7) 100%), url('https://images.unsplash.com/photo-1504328345606-18bbc8c9d7d1?w=1600&q=80') center/cover no-repeat; }
+  .hero-grid-overlay { position: absolute; inset: 0; background-image: linear-gradient(rgba(232,93,4,0.04) 1px, transparent 1px), linear-gradient(90deg, rgba(232,93,4,0.04) 1px, transparent 1px); background-size: 60px 60px; pointer-events: none; }
+  .hero-glow { position: absolute; top: 20%; right: 15%; width: 500px; height: 500px; background: radial-gradient(circle, rgba(232,93,4,0.12) 0%, transparent 70%); pointer-events: none; }
+  .hero-content { position: relative; max-width: 680px; z-index: 2; }
+  .badge { display: inline-flex; align-items: center; gap: 8px; background: var(--orange-dim); border: 1px solid rgba(232,93,4,0.4); border-radius: 100px; padding: 6px 14px; font-size: 11px; font-weight: 600; letter-spacing: 0.12em; color: var(--orange); text-transform: uppercase; margin-bottom: 28px; }
+  .badge::before { content: ''; width: 6px; height: 6px; background: var(--orange); border-radius: 50%; animation: pulse 2s infinite; }
+  @keyframes pulse { 0%, 100% { opacity: 1; transform: scale(1); } 50% { opacity: 0.5; transform: scale(0.8); } }
+  h1 { font-family: 'Barlow Condensed', sans-serif; font-weight: 900; font-size: clamp(52px, 8vw, 96px); line-height: 0.92; letter-spacing: -0.01em; text-transform: uppercase; margin-bottom: 20px; }
+  h1 em { font-style: italic; color: var(--orange); display: block; }
+  .hero-sub { font-size: 15px; color: var(--grey-light); line-height: 1.7; max-width: 480px; margin-bottom: 12px; }
+  .hero-certifications { display: flex; gap: 10px; margin-bottom: 36px; flex-wrap: wrap; }
+  .cert-badge { font-size: 10px; font-weight: 700; letter-spacing: 0.1em; border: 1px solid var(--border); padding: 4px 10px; border-radius: 4px; color: var(--grey); text-transform: uppercase; }
+  .hero-buttons { display: flex; gap: 14px; flex-wrap: wrap; margin-bottom: 52px; }
+  .btn-primary { display: inline-flex; align-items: center; gap: 10px; background: var(--orange); color: white; padding: 15px 28px; border-radius: 6px; font-weight: 700; font-size: 14px; text-decoration: none; letter-spacing: 0.02em; transition: background 0.2s, transform 0.2s; }
+  .btn-primary:hover { background: var(--orange-light); transform: translateY(-2px); }
+  .btn-secondary { display: inline-flex; align-items: center; gap: 10px; background: transparent; color: white; padding: 15px 28px; border-radius: 6px; border: 1.5px solid rgba(255,255,255,0.25); font-weight: 600; font-size: 14px; text-decoration: none; letter-spacing: 0.02em; transition: border-color 0.2s, background 0.2s, transform 0.2s; }
+  .btn-secondary:hover { border-color: var(--orange); background: var(--orange-dim); transform: translateY(-2px); }
+  .hero-hotline { display: flex; align-items: center; gap: 14px; }
+  .hotline-icon { width: 44px; height: 44px; background: var(--orange-dim); border: 1px solid rgba(232,93,4,0.3); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 18px; }
+  .hotline-label { font-size: 10px; letter-spacing: 0.12em; text-transform: uppercase; color: var(--orange); font-weight: 600; }
+  .hotline-number { font-family: 'Barlow Condensed', sans-serif; font-size: 22px; font-weight: 800; letter-spacing: 0.04em; }
+  .trust-bar { background: var(--navy-mid); border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); padding: 20px 5%; display: flex; align-items: center; justify-content: space-between; gap: 24px; flex-wrap: wrap; }
+  .trust-item { display: flex; align-items: center; gap: 10px; font-size: 13px; color: var(--grey-light); font-weight: 500; }
   .trust-icon { font-size: 20px; }
- 
-  /* ---- SECTION SHARED ---- */
   section { padding: 96px 5%; }
- 
-  .section-label {
-    font-size: 11px;
-    letter-spacing: 0.2em;
-    text-transform: uppercase;
-    color: var(--orange);
-    font-weight: 700;
-    margin-bottom: 12px;
-  }
- 
-  .section-title {
-    font-family: 'Barlow Condensed', sans-serif;
-    font-weight: 900;
-    font-size: clamp(36px, 5vw, 58px);
-    line-height: 1;
-    text-transform: uppercase;
-    letter-spacing: -0.01em;
-    margin-bottom: 16px;
-  }
- 
-  .section-desc {
-    color: var(--grey);
-    font-size: 15px;
-    line-height: 1.75;
-    max-width: 560px;
-  }
- 
-  .section-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-end;
-    margin-bottom: 56px;
-    gap: 24px;
-    flex-wrap: wrap;
-  }
- 
-  /* ---- PRODUCTS ---- */
+  .section-label { font-size: 11px; letter-spacing: 0.2em; text-transform: uppercase; color: var(--orange); font-weight: 700; margin-bottom: 12px; }
+  .section-title { font-family: 'Barlow Condensed', sans-serif; font-weight: 900; font-size: clamp(36px, 5vw, 58px); line-height: 1; text-transform: uppercase; letter-spacing: -0.01em; margin-bottom: 16px; }
+  .section-desc { color: var(--grey); font-size: 15px; line-height: 1.75; max-width: 560px; }
+  .section-header { display: flex; justify-content: space-between; align-items: flex-end; margin-bottom: 56px; gap: 24px; flex-wrap: wrap; }
   #products { background: var(--navy); }
- 
-  .products-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-    gap: 20px;
-  }
- 
-  .product-card {
-    background: var(--navy-mid);
-    border: 1px solid var(--border);
-    border-radius: 12px;
-    overflow: hidden;
-    transition: border-color 0.3s, transform 0.3s;
-    text-decoration: none;
-    color: inherit;
-    display: flex;
-    flex-direction: column;
-  }
- 
-  .product-card:hover {
-    border-color: var(--orange);
-    transform: translateY(-4px);
-  }
- 
-  .product-img {
-    width: 100%;
-    height: 200px;
-    overflow: hidden;
-    background: #1a2540;
-  }
- 
-  .product-img img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    display: block;
-    transition: transform 0.4s ease;
-  }
- 
-  .product-card:hover .product-img img {
-    transform: scale(1.06);
-  }
- 
-  .product-body {
-    padding: 20px 22px 24px;
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-  }
- 
-  .product-tag {
-    font-size: 10px;
-    letter-spacing: 0.15em;
-    text-transform: uppercase;
-    color: var(--orange);
-    font-weight: 700;
-    margin-bottom: 8px;
-  }
- 
-  .product-name {
-    font-family: 'Barlow Condensed', sans-serif;
-    font-weight: 800;
-    font-size: 22px;
-    text-transform: uppercase;
-    margin-bottom: 8px;
-    letter-spacing: 0.02em;
-  }
- 
-  .product-desc {
-    font-size: 13px;
-    color: var(--grey);
-    line-height: 1.6;
-    flex: 1;
-    margin-bottom: 18px;
-  }
- 
-  .product-link {
-    display: inline-flex;
-    align-items: center;
-    gap: 6px;
-    font-size: 13px;
-    font-weight: 700;
-    color: var(--orange);
-    letter-spacing: 0.04em;
-    text-transform: uppercase;
-  }
- 
-  /* ---- MINE AFRICA AFFILIATE BANNER ---- */
-  .affiliate-banner {
-    background: linear-gradient(135deg, var(--navy-light), var(--navy-mid));
-    border: 1px solid var(--border);
-    border-left: 4px solid var(--orange);
-    border-radius: 12px;
-    padding: 36px 40px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 28px;
-    margin-top: 52px;
-    flex-wrap: wrap;
-  }
- 
-  .affiliate-text h3 {
-    font-family: 'Barlow Condensed', sans-serif;
-    font-size: 28px;
-    font-weight: 900;
-    text-transform: uppercase;
-    letter-spacing: 0.02em;
-    margin-bottom: 6px;
-  }
- 
-  .affiliate-text p {
-    color: var(--grey);
-    font-size: 14px;
-    line-height: 1.6;
-    max-width: 480px;
-  }
- 
-  /* ---- SECTORS ---- */
-  #sectors {
-    background: var(--navy-mid);
-  }
- 
-  .sectors-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-    gap: 16px;
-  }
- 
-  .sector-card {
-    background: var(--navy);
-    border: 1px solid var(--border);
-    border-radius: 10px;
-    padding: 28px 22px;
-    transition: border-color 0.3s, background 0.3s;
-    cursor: default;
-  }
- 
-  .sector-card:hover {
-    border-color: var(--orange);
-    background: var(--orange-dim);
-  }
- 
+  .products-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 20px; }
+  .product-card { background: var(--navy-mid); border: 1px solid var(--border); border-radius: 12px; overflow: hidden; transition: border-color 0.3s, transform 0.3s; text-decoration: none; color: inherit; display: flex; flex-direction: column; }
+  .product-card:hover { border-color: var(--orange); transform: translateY(-4px); }
+  .product-img { width: 100%; height: 200px; overflow: hidden; background: #1a2540; }
+  .product-img img { width: 100%; height: 100%; object-fit: cover; display: block; transition: transform 0.4s ease; }
+  .product-card:hover .product-img img { transform: scale(1.06); }
+  .product-body { padding: 20px 22px 24px; flex: 1; display: flex; flex-direction: column; }
+  .product-tag { font-size: 10px; letter-spacing: 0.15em; text-transform: uppercase; color: var(--orange); font-weight: 700; margin-bottom: 8px; }
+  .product-name { font-family: 'Barlow Condensed', sans-serif; font-weight: 800; font-size: 22px; text-transform: uppercase; margin-bottom: 8px; letter-spacing: 0.02em; }
+  .product-desc { font-size: 13px; color: var(--grey); line-height: 1.6; flex: 1; margin-bottom: 18px; }
+  .product-link { display: inline-flex; align-items: center; gap: 6px; font-size: 13px; font-weight: 700; color: var(--orange); letter-spacing: 0.04em; text-transform: uppercase; }
+  .affiliate-banner { background: linear-gradient(135deg, var(--navy-light), var(--navy-mid)); border: 1px solid var(--border); border-left: 4px solid var(--orange); border-radius: 12px; padding: 36px 40px; display: flex; align-items: center; justify-content: space-between; gap: 28px; margin-top: 52px; flex-wrap: wrap; }
+  .affiliate-text h3 { font-family: 'Barlow Condensed', sans-serif; font-size: 28px; font-weight: 900; text-transform: uppercase; letter-spacing: 0.02em; margin-bottom: 6px; }
+  .affiliate-text p { color: var(--grey); font-size: 14px; line-height: 1.6; max-width: 480px; }
+  #sectors { background: var(--navy-mid); }
+  .sectors-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 16px; }
+  .sector-card { background: var(--navy); border: 1px solid var(--border); border-radius: 10px; padding: 28px 22px; transition: border-color 0.3s, background 0.3s; cursor: default; }
+  .sector-card:hover { border-color: var(--orange); background: var(--orange-dim); }
   .sector-icon { font-size: 32px; margin-bottom: 12px; }
- 
-  .sector-name {
-    font-family: 'Barlow Condensed', sans-serif;
-    font-size: 18px;
-    font-weight: 800;
-    text-transform: uppercase;
-    letter-spacing: 0.04em;
-    margin-bottom: 6px;
-  }
- 
-  .sector-desc {
-    font-size: 12px;
-    color: var(--grey);
-    line-height: 1.5;
-  }
- 
-  /* ---- BULK ORDERS ---- */
-  #bulk {
-    background: var(--navy);
-    text-align: center;
-  }
- 
-  .bulk-inner {
-    max-width: 680px;
-    margin: 0 auto;
-  }
- 
-  .bulk-steps {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-    gap: 20px;
-    margin: 52px 0;
-    text-align: left;
-  }
- 
-  .step {
-    background: var(--navy-mid);
-    border: 1px solid var(--border);
-    border-radius: 10px;
-    padding: 24px 20px;
-  }
- 
-  .step-num {
-    font-family: 'Barlow Condensed', sans-serif;
-    font-size: 40px;
-    font-weight: 900;
-    color: var(--orange);
-    opacity: 0.4;
-    line-height: 1;
-    margin-bottom: 10px;
-  }
- 
-  .step-title {
-    font-weight: 700;
-    font-size: 14px;
-    margin-bottom: 6px;
-  }
- 
-  .step-desc {
-    font-size: 12px;
-    color: var(--grey);
-    line-height: 1.5;
-  }
- 
-  .bulk-buttons {
-    display: flex;
-    gap: 14px;
-    justify-content: center;
-    flex-wrap: wrap;
-  }
- 
-  /* ---- ABOUT ---- */
-  #about {
-    background: var(--navy-mid);
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 80px;
-    align-items: center;
-  }
- 
-  @media (max-width: 860px) {
-    #about { grid-template-columns: 1fr; gap: 40px; }
-  }
- 
-  .about-stats {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 2px;
-    margin-top: 40px;
-  }
- 
-  .stat {
-    background: var(--navy);
-    padding: 24px 20px;
-  }
- 
-  .stat-num {
-    font-family: 'Barlow Condensed', sans-serif;
-    font-size: 40px;
-    font-weight: 900;
-    color: var(--orange);
-    line-height: 1;
-    margin-bottom: 4px;
-  }
- 
-  .stat-label {
-    font-size: 12px;
-    color: var(--grey);
-    text-transform: uppercase;
-    letter-spacing: 0.08em;
-  }
- 
-  .about-img-block {
-    position: relative;
-  }
- 
-  .about-img {
-    width: 100%;
-    aspect-ratio: 4/3;
-    object-fit: cover;
-    border-radius: 12px;
-    background: var(--navy-light);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 80px;
-    overflow: hidden;
-  }
- 
-  .about-img img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-  }
- 
-  .about-accent {
-    position: absolute;
-    bottom: -20px;
-    right: -20px;
-    width: 120px;
-    height: 120px;
-    background: var(--orange);
-    border-radius: 12px;
-    z-index: -1;
-  }
- 
-  /* ---- CONTACT ---- */
-  #contact {
-    background: var(--navy);
-  }
- 
-  .contact-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 60px;
-    align-items: start;
-  }
- 
-  @media (max-width: 760px) {
-    .contact-grid { grid-template-columns: 1fr; gap: 40px; }
-  }
- 
+  .sector-name { font-family: 'Barlow Condensed', sans-serif; font-size: 18px; font-weight: 800; text-transform: uppercase; letter-spacing: 0.04em; margin-bottom: 6px; }
+  .sector-desc { font-size: 12px; color: var(--grey); line-height: 1.5; }
+  #bulk { background: var(--navy); text-align: center; }
+  .bulk-inner { max-width: 680px; margin: 0 auto; }
+  .bulk-steps { display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 20px; margin: 52px 0; text-align: left; }
+  .step { background: var(--navy-mid); border: 1px solid var(--border); border-radius: 10px; padding: 24px 20px; }
+  .step-num { font-family: 'Barlow Condensed', sans-serif; font-size: 40px; font-weight: 900; color: var(--orange); opacity: 0.4; line-height: 1; margin-bottom: 10px; }
+  .step-title { font-weight: 700; font-size: 14px; margin-bottom: 6px; }
+  .step-desc { font-size: 12px; color: var(--grey); line-height: 1.5; }
+  .bulk-buttons { display: flex; gap: 14px; justify-content: center; flex-wrap: wrap; }
+  #about { background: var(--navy-mid); display: grid; grid-template-columns: 1fr 1fr; gap: 80px; align-items: center; }
+  @media (max-width: 860px) { #about { grid-template-columns: 1fr; gap: 40px; } }
+  .about-stats { display: grid; grid-template-columns: 1fr 1fr; gap: 2px; margin-top: 40px; }
+  .stat { background: var(--navy); padding: 24px 20px; }
+  .stat-num { font-family: 'Barlow Condensed', sans-serif; font-size: 40px; font-weight: 900; color: var(--orange); line-height: 1; margin-bottom: 4px; }
+  .stat-label { font-size: 12px; color: var(--grey); text-transform: uppercase; letter-spacing: 0.08em; }
+  .about-img-block { position: relative; }
+  .about-img { width: 100%; aspect-ratio: 4/3; object-fit: cover; border-radius: 12px; background: var(--navy-light); display: flex; align-items: center; justify-content: center; font-size: 80px; overflow: hidden; }
+  .about-img img { width: 100%; height: 100%; object-fit: cover; }
+  .about-accent { position: absolute; bottom: -20px; right: -20px; width: 120px; height: 120px; background: var(--orange); border-radius: 12px; z-index: -1; }
+  #contact { background: var(--navy); }
+  .contact-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: start; }
+  @media (max-width: 760px) { .contact-grid { grid-template-columns: 1fr; gap: 40px; } }
   .contact-info > * + * { margin-top: 28px; }
- 
-  .contact-item {
-    display: flex;
-    gap: 16px;
-    align-items: flex-start;
-  }
- 
-  .contact-icon {
-    width: 44px; height: 44px;
-    background: var(--orange-dim);
-    border: 1px solid rgba(232,93,4,0.3);
-    border-radius: 8px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 18px;
-    flex-shrink: 0;
-  }
- 
-  .contact-label {
-    font-size: 10px;
-    letter-spacing: 0.15em;
-    text-transform: uppercase;
-    color: var(--orange);
-    font-weight: 700;
-    margin-bottom: 4px;
-  }
- 
-  .contact-value {
-    font-weight: 600;
-    font-size: 15px;
-  }
- 
-  .contact-form {
-    background: var(--navy-mid);
-    border: 1px solid var(--border);
-    border-radius: 12px;
-    padding: 36px;
-  }
- 
-  .form-title {
-    font-family: 'Barlow Condensed', sans-serif;
-    font-size: 24px;
-    font-weight: 800;
-    text-transform: uppercase;
-    letter-spacing: 0.04em;
-    margin-bottom: 24px;
-  }
- 
+  .contact-item { display: flex; gap: 16px; align-items: flex-start; }
+  .contact-icon { width: 44px; height: 44px; background: var(--orange-dim); border: 1px solid rgba(232,93,4,0.3); border-radius: 8px; display: flex; align-items: center; justify-content: center; font-size: 18px; flex-shrink: 0; }
+  .contact-label { font-size: 10px; letter-spacing: 0.15em; text-transform: uppercase; color: var(--orange); font-weight: 700; margin-bottom: 4px; }
+  .contact-value { font-weight: 600; font-size: 15px; }
+  .contact-form { background: var(--navy-mid); border: 1px solid var(--border); border-radius: 12px; padding: 36px; }
+  .form-title { font-family: 'Barlow Condensed', sans-serif; font-size: 24px; font-weight: 800; text-transform: uppercase; letter-spacing: 0.04em; margin-bottom: 24px; }
   .form-group { margin-bottom: 16px; }
- 
-  .form-group label {
-    display: block;
-    font-size: 11px;
-    letter-spacing: 0.12em;
-    text-transform: uppercase;
-    color: var(--grey);
-    font-weight: 600;
-    margin-bottom: 6px;
-  }
- 
-  .form-group input,
-  .form-group select,
-  .form-group textarea {
-    width: 100%;
-    background: var(--navy);
-    border: 1px solid var(--border);
-    border-radius: 6px;
-    padding: 12px 14px;
-    color: var(--white);
-    font-family: 'DM Sans', sans-serif;
-    font-size: 14px;
-    outline: none;
-    transition: border-color 0.2s;
-  }
- 
-  .form-group input:focus,
-  .form-group select:focus,
-  .form-group textarea:focus {
-    border-color: var(--orange);
-  }
- 
+  .form-group label { display: block; font-size: 11px; letter-spacing: 0.12em; text-transform: uppercase; color: var(--grey); font-weight: 600; margin-bottom: 6px; }
+  .form-group input, .form-group select, .form-group textarea { width: 100%; background: var(--navy); border: 1px solid var(--border); border-radius: 6px; padding: 12px 14px; color: var(--white); font-family: 'DM Sans', sans-serif; font-size: 14px; outline: none; transition: border-color 0.2s; }
+  .form-group input:focus, .form-group select:focus, .form-group textarea:focus { border-color: var(--orange); }
   .form-group select option { background: var(--navy-mid); }
   .form-group textarea { resize: vertical; min-height: 100px; }
- 
-  .form-row {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 14px;
-  }
- 
-  /* ---- FOOTER ---- */
-  footer {
-    background: var(--navy-mid);
-    border-top: 1px solid var(--border);
-    padding: 60px 5% 30px;
-  }
- 
-  .footer-grid {
-    display: grid;
-    grid-template-columns: 2fr 1fr 1fr 1.4fr;
-    gap: 48px;
-    margin-bottom: 52px;
-    flex-wrap: wrap;
-  }
- 
-  @media (max-width: 900px) {
-    .footer-grid { grid-template-columns: 1fr 1fr; }
-  }
- 
-  @media (max-width: 520px) {
-    .footer-grid { grid-template-columns: 1fr; }
-  }
- 
-  .footer-about p {
-    color: var(--grey);
-    font-size: 13px;
-    line-height: 1.75;
-    margin-top: 16px;
-  }
- 
-  .footer-col h4 {
-    font-size: 10px;
-    letter-spacing: 0.2em;
-    text-transform: uppercase;
-    color: var(--grey);
-    font-weight: 700;
-    margin-bottom: 18px;
-  }
- 
+  .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+  footer { background: var(--navy-mid); border-top: 1px solid var(--border); padding: 60px 5% 30px; }
+  .footer-grid { display: grid; grid-template-columns: 2fr 1fr 1fr 1.4fr; gap: 48px; margin-bottom: 52px; }
+  @media (max-width: 900px) { .footer-grid { grid-template-columns: 1fr 1fr; } }
+  @media (max-width: 520px) { .footer-grid { grid-template-columns: 1fr; } }
+  .footer-about p { color: var(--grey); font-size: 13px; line-height: 1.75; margin-top: 16px; }
+  .footer-col h4 { font-size: 10px; letter-spacing: 0.2em; text-transform: uppercase; color: var(--grey); font-weight: 700; margin-bottom: 18px; }
   .footer-col ul { list-style: none; }
   .footer-col ul li { margin-bottom: 10px; }
-  .footer-col ul li a {
-    color: var(--grey-light);
-    text-decoration: none;
-    font-size: 13px;
-    transition: color 0.2s;
-  }
+  .footer-col ul li a { color: var(--grey-light); text-decoration: none; font-size: 13px; transition: color 0.2s; }
   .footer-col ul li a:hover { color: var(--orange); }
- 
-  .newsletter-form {
-    margin-top: 12px;
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-  }
- 
-  .newsletter-form input {
-    background: var(--navy);
-    border: 1px solid var(--border);
-    border-radius: 6px;
-    padding: 12px 14px;
-    color: var(--white);
-    font-family: 'DM Sans', sans-serif;
-    font-size: 13px;
-    outline: none;
-  }
- 
+  .newsletter-form { margin-top: 12px; display: flex; flex-direction: column; gap: 10px; }
+  .newsletter-form input { background: var(--navy); border: 1px solid var(--border); border-radius: 6px; padding: 12px 14px; color: var(--white); font-family: 'DM Sans', sans-serif; font-size: 13px; outline: none; }
   .newsletter-form input:focus { border-color: var(--orange); }
- 
-  .newsletter-form button {
-    background: var(--orange);
-    color: white;
-    border: none;
-    padding: 12px;
-    border-radius: 6px;
-    font-weight: 700;
-    font-size: 12px;
-    letter-spacing: 0.1em;
-    text-transform: uppercase;
-    cursor: pointer;
-    transition: background 0.2s;
-  }
- 
+  .newsletter-form button { background: var(--orange); color: white; border: none; padding: 12px; border-radius: 6px; font-weight: 700; font-size: 12px; letter-spacing: 0.1em; text-transform: uppercase; cursor: pointer; transition: background 0.2s; }
   .newsletter-form button:hover { background: var(--orange-light); }
- 
-  .footer-bottom {
-    border-top: 1px solid var(--border);
-    padding-top: 28px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    gap: 16px;
-    flex-wrap: wrap;
-  }
- 
-  .footer-bottom p {
-    color: var(--grey);
-    font-size: 12px;
-  }
- 
-  .footer-social {
-    display: flex;
-    gap: 12px;
-  }
- 
-  .social-btn {
-    width: 36px; height: 36px;
-    border: 1px solid var(--border);
-    border-radius: 8px;
-    display: flex; align-items: center; justify-content: center;
-    font-size: 16px;
-    text-decoration: none;
-    color: var(--grey);
-    transition: border-color 0.2s, color 0.2s;
-  }
- 
-  .social-btn:hover {
-    border-color: var(--orange);
-    color: var(--orange);
-  }
- 
-  /* ---- QUOTE MODAL ---- */
-  .modal-overlay {
-    display: none;
-    position: fixed;
-    inset: 0;
-    background: rgba(0,0,0,0.75);
-    z-index: 2000;
-    align-items: center;
-    justify-content: center;
-    padding: 20px;
-  }
- 
+  .footer-bottom { border-top: 1px solid var(--border); padding-top: 28px; display: flex; justify-content: space-between; align-items: center; gap: 16px; flex-wrap: wrap; }
+  .footer-bottom p { color: var(--grey); font-size: 12px; }
+  .footer-social { display: flex; gap: 12px; }
+  .social-btn { width: 36px; height: 36px; border: 1px solid var(--border); border-radius: 8px; display: flex; align-items: center; justify-content: center; font-size: 16px; text-decoration: none; color: var(--grey); transition: border-color 0.2s, color 0.2s; }
+  .social-btn:hover { border-color: var(--orange); color: var(--orange); }
+  .modal-overlay { display: none; position: fixed; inset: 0; background: rgba(0,0,0,0.75); z-index: 2000; align-items: center; justify-content: center; padding: 20px; }
   .modal-overlay.open { display: flex; }
- 
-  .modal {
-    background: var(--navy-mid);
-    border: 1px solid var(--border);
-    border-radius: 16px;
-    width: 100%;
-    max-width: 560px;
-    max-height: 90vh;
-    overflow-y: auto;
-    padding: 40px;
-    position: relative;
-  }
- 
-  .modal-close {
-    position: absolute;
-    top: 20px; right: 20px;
-    background: none;
-    border: 1px solid var(--border);
-    color: var(--grey);
-    width: 36px; height: 36px;
-    border-radius: 8px;
-    cursor: pointer;
-    font-size: 18px;
-    display: flex; align-items: center; justify-content: center;
-    transition: border-color 0.2s, color 0.2s;
-  }
- 
+  .modal { background: var(--navy-mid); border: 1px solid var(--border); border-radius: 16px; width: 100%; max-width: 560px; max-height: 90vh; overflow-y: auto; padding: 40px; position: relative; }
+  .modal-close { position: absolute; top: 20px; right: 20px; background: none; border: 1px solid var(--border); color: var(--grey); width: 36px; height: 36px; border-radius: 8px; cursor: pointer; font-size: 18px; display: flex; align-items: center; justify-content: center; transition: border-color 0.2s, color 0.2s; }
   .modal-close:hover { border-color: var(--orange); color: var(--orange); }
- 
-  /* ---- ANIMATIONS ---- */
-  /* js-ready added by JS — ensures content always shows even if observer fails */
-  .js-ready .fade-up {
-    opacity: 0;
-    transform: translateY(30px);
-    transition: opacity 0.6s, transform 0.6s;
-  }
-  .js-ready .fade-up.visible {
-    opacity: 1;
-    transform: translateY(0);
-  }
+  .js-ready .fade-up { opacity: 0; transform: translateY(30px); transition: opacity 0.6s, transform 0.6s; }
+  .js-ready .fade-up.visible { opacity: 1; transform: translateY(0); }
   .delay-1 { transition-delay: 0.1s; }
   .delay-2 { transition-delay: 0.2s; }
-  .delay-3 { transition-delay: 0.3s; }
- 
-  /* ---- MOBILE NAV ---- */
-  .mobile-menu {
-    display: none;
-    position: fixed;
-    top: 72px; left: 0; right: 0;
-    background: var(--navy-mid);
-    border-bottom: 1px solid var(--border);
-    padding: 24px 5%;
-    z-index: 999;
-    flex-direction: column;
-    gap: 20px;
-  }
- 
+  .mobile-menu { display: none; position: fixed; top: 72px; left: 0; right: 0; background: var(--navy-mid); border-bottom: 1px solid var(--border); padding: 24px 5%; z-index: 999; flex-direction: column; gap: 20px; }
   .mobile-menu.open { display: flex; }
- 
-  .mobile-menu a {
-    color: var(--grey-light);
-    text-decoration: none;
-    font-size: 15px;
-    font-weight: 500;
-    padding: 10px 0;
-    border-bottom: 1px solid var(--border);
-  }
- 
+  .mobile-menu a { color: var(--grey-light); text-decoration: none; font-size: 15px; font-weight: 500; padding: 10px 0; border-bottom: 1px solid var(--border); }
   .mobile-menu a:last-child { border-bottom: none; }
- 
-  /* ---- RESPONSIVE ---- */
-  @media (max-width: 768px) {
-    .nav-links { display: none; }
-    .hamburger { display: flex; }
- 
-    #hero { padding: 100px 5% 60px; }
- 
-    .trust-bar { gap: 12px; }
-    .trust-item:nth-child(n+4) { display: none; }
- 
-    .footer-grid { grid-template-columns: 1fr 1fr; }
-    .form-row { grid-template-columns: 1fr; }
- 
-    #about { padding: 60px 5%; }
-    section { padding: 64px 5%; }
- 
-    .products-grid { grid-template-columns: 1fr 1fr; }
-  }
- 
-  @media (max-width: 480px) {
-    .products-grid { grid-template-columns: 1fr; }
-    .sectors-grid { grid-template-columns: 1fr 1fr; }
-  }
+  @media (max-width: 768px) { .nav-links { display: none; } .hamburger { display: flex; } #hero { padding: 100px 5% 60px; } .trust-bar { gap: 12px; } .trust-item:nth-child(n+4) { display: none; } .footer-grid { grid-template-columns: 1fr 1fr; } .form-row { grid-template-columns: 1fr; } #about { padding: 60px 5%; } section { padding: 64px 5%; } .products-grid { grid-template-columns: 1fr 1fr; } }
+  @media (max-width: 480px) { .products-grid { grid-template-columns: 1fr; } .sectors-grid { grid-template-columns: 1fr 1fr; } }
 </style>
 </head>
 <body>
  
-<!-- NAV -->
 <nav id="navbar">
   <a href="#hero" class="logo">
     <div class="logo-mark">BK</div>
@@ -1044,7 +183,6 @@
   </div>
 </nav>
  
-<!-- MOBILE MENU -->
 <div class="mobile-menu" id="mobileMenu">
   <a href="#products" onclick="toggleMobile()">Our Products</a>
   <a href="#bulk" onclick="toggleMobile()">Bulk Orders</a>
@@ -1054,7 +192,6 @@
   <a href="#" onclick="openModal(); toggleMobile()" style="color: var(--orange); font-weight: 700;">Get a Quote</a>
 </div>
  
-<!-- HERO -->
 <section id="hero">
   <div class="hero-bg"></div>
   <div class="hero-grid-overlay"></div>
@@ -1077,13 +214,12 @@
       <div class="hotline-icon">📞</div>
       <div>
         <div class="hotline-label">24/7 Hotline</div>
-        <div class="hotline-number"><a href="tel:+27729159871" style="color: inherit; text-decoration: none;">+27 72 915 9871</a></div>
+        <div class="hotline-number"><a href="tel:+27729159871" style="color:inherit;text-decoration:none;">+27 72 915 9871</a></div>
       </div>
     </div>
   </div>
 </section>
  
-<!-- TRUST BAR -->
 <div class="trust-bar">
   <div class="trust-item"><span class="trust-icon">🛡️</span> SABS-Approved Gear</div>
   <div class="trust-item"><span class="trust-icon">🚚</span> Direct Site Delivery</div>
@@ -1092,7 +228,6 @@
   <div class="trust-item"><span class="trust-icon">⚡</span> Fast Turnaround</div>
 </div>
  
-<!-- PRODUCTS -->
 <section id="products">
   <div class="section-header fade-up">
     <div>
@@ -1102,99 +237,115 @@
     <p class="section-desc">Sourced from leading manufacturers including Mine Africa, U-Safety Solutions and regional distributors. Every product certified for South Africa's most demanding sectors.</p>
   </div>
  
-        <div class="products-grid">
+  <div class="products-grid">
  
+    <!-- 1. HARD HATS - from your GitHub images folder -->
     <a href="https://mineafrica.co.za/Hard-Hats?ref=pPuyfECz9SHZrRc3w6zFwfW2f5yYo8LiN2hys3dTZKlSJrY2ypA72w21manqCKOA" target="_blank" class="product-card fade-up">
       <div class="product-img">
-        <img src="https://images.pexels.com/photos/1216589/pexels-photo-1216589.jpeg?auto=compress&cs=tinysrgb&w=600&h=400&fit=crop&fp-y=0.15" alt="Worker wearing yellow hard hat on construction site">
+        <img src="hard-hats.jpg" alt="Hard hats and safety helmets"
+          onerror="this.src='https://images.pexels.com/photos/8961138/pexels-photo-8961138.jpeg?auto=compress&cs=tinysrgb&w=600&h=400&fit=crop'">
       </div>
       <div class="product-body">
         <div class="product-tag">Head Protection</div>
-        <div class="product-name">Hard Hats &amp; Helmets</div>
+        <div class="product-name">Hard Hats & Helmets</div>
         <p class="product-desc">SABS-approved hard hats for construction, mining and industrial environments. ARC rated and electrically insulated options available.</p>
         <span class="product-link">View Range →</span>
       </div>
     </a>
  
+    <!-- 2. SAFETY BOOTS - from your GitHub images folder -->
     <a href="https://mineafrica.co.za/Foot-Protection?ref=pPuyfECz9SHZrRc3w6zFwfW2f5yYo8LiN2hys3dTZKlSJrY2ypA72w21manqCKOA" target="_blank" class="product-card fade-up delay-1">
       <div class="product-img">
-        <img src="https://images.pexels.com/photos/1464625/pexels-photo-1464625.jpeg?auto=compress&cs=tinysrgb&w=600&h=400&fit=crop" alt="Black steel toe safety work boots">
+        <img src="safety-boots.jpg" alt="Steel toe safety boots and gumboots"
+          onerror="this.src='https://images.pexels.com/photos/6914354/pexels-photo-6914354.jpeg?auto=compress&cs=tinysrgb&w=600&h=400&fit=crop'">
       </div>
       <div class="product-body">
         <div class="product-tag">Foot Protection</div>
-        <div class="product-name">Safety Boots &amp; Gumboots</div>
+        <div class="product-name">Safety Boots & Gumboots</div>
         <p class="product-desc">Steel-toe, waterproof and chemical-resistant boots for mining, agriculture and heavy industry. Steel midsole anti-penetration protection.</p>
         <span class="product-link">View Range →</span>
       </div>
     </a>
  
+    <!-- 3. GLOVES - from your GitHub images folder -->
     <a href="https://mineafrica.co.za/Hand-Protection?ref=pPuyfECz9SHZrRc3w6zFwfW2f5yYo8LiN2hys3dTZKlSJrY2ypA72w21manqCKOA" target="_blank" class="product-card fade-up delay-2">
       <div class="product-img">
-        <img src="https://images.pexels.com/photos/1108101/pexels-photo-1108101.jpeg?auto=compress&cs=tinysrgb&w=600&h=400&fit=crop" alt="Industrial safety gloves for construction">
+        <img src="gloves.jpg" alt="Industrial safety gloves and gauntlets"
+          onerror="this.src='https://images.pexels.com/photos/8961462/pexels-photo-8961462.jpeg?auto=compress&cs=tinysrgb&w=600&h=400&fit=crop'">
       </div>
       <div class="product-body">
         <div class="product-tag">Hand Protection</div>
-        <div class="product-name">Gloves &amp; Gauntlets</div>
+        <div class="product-name">Gloves & Gauntlets</div>
         <p class="product-desc">Cut-resistant, heat-proof and chemical-rated gloves. Suitable for welding, mining, electrical and food-grade environments.</p>
         <span class="product-link">View Range →</span>
       </div>
     </a>
  
+    <!-- 4. RESPIRATORS - from your GitHub images folder -->
     <a href="https://mineafrica.co.za/Face-Protection?ref=pPuyfECz9SHZrRc3w6zFwfW2f5yYo8LiN2hys3dTZKlSJrY2ypA72w21manqCKOA" target="_blank" class="product-card fade-up">
       <div class="product-img">
-        <img src="https://images.pexels.com/photos/3786126/pexels-photo-3786126.jpeg?auto=compress&cs=tinysrgb&w=600&h=400&fit=crop" alt="Worker wearing industrial dust respirator mask">
+        <img src="respirators.jpg" alt="Industrial dust masks and respirators"
+          onerror="this.src='https://images.pexels.com/photos/5327585/pexels-photo-5327585.jpeg?auto=compress&cs=tinysrgb&w=600&h=400&fit=crop'">
       </div>
       <div class="product-body">
         <div class="product-tag">Respiratory Protection</div>
-        <div class="product-name">Masks &amp; Respirators</div>
+        <div class="product-name">Masks & Respirators</div>
         <p class="product-desc">Half-face and full-face respirators for dust, chemical vapour and particulate protection. TPR face-piece for long-shift comfort.</p>
         <span class="product-link">View Range →</span>
       </div>
     </a>
  
+    <!-- 5. SAFETY GLASSES - from your GitHub images folder -->
     <a href="https://mineafrica.co.za/Face-Protection?ref=pPuyfECz9SHZrRc3w6zFwfW2f5yYo8LiN2hys3dTZKlSJrY2ypA72w21manqCKOA" target="_blank" class="product-card fade-up delay-1">
       <div class="product-img">
-        <img src="https://images.pexels.com/photos/3825517/pexels-photo-3825517.jpeg?auto=compress&cs=tinysrgb&w=600&h=400&fit=crop" alt="Safety glasses and protective visors">
+        <img src="safety-glasses.jpg" alt="Safety glasses and protective visors"
+          onerror="this.src='https://images.pexels.com/photos/3825517/pexels-photo-3825517.jpeg?auto=compress&cs=tinysrgb&w=600&h=400&fit=crop'">
       </div>
       <div class="product-body">
-        <div class="product-tag">Eye &amp; Face Protection</div>
-        <div class="product-name">Safety Glasses &amp; Visors</div>
+        <div class="product-tag">Eye & Face Protection</div>
+        <div class="product-name">Safety Glasses & Visors</div>
         <p class="product-desc">Anti-fog, UV-rated and impact-resistant eyewear and face shields for welding, grinding and chemical handling operations.</p>
         <span class="product-link">View Range →</span>
       </div>
     </a>
  
+    <!-- 6. COVERALLS - from your GitHub images folder -->
     <a href="https://mineafrica.co.za/body-protection?ref=pPuyfECz9SHZrRc3w6zFwfW2f5yYo8LiN2hys3dTZKlSJrY2ypA72w21manqCKOA" target="_blank" class="product-card fade-up delay-2">
       <div class="product-img">
-        <img src="https://images.pexels.com/photos/2760241/pexels-photo-2760241.jpeg?auto=compress&cs=tinysrgb&w=600&h=400&fit=crop" alt="Worker in hi-vis orange coveralls on construction site">
+        <img src="coveralls.jpg" alt="Hi-vis coveralls and workwear"
+          onerror="this.src='https://images.pexels.com/photos/8961469/pexels-photo-8961469.jpeg?auto=compress&cs=tinysrgb&w=600&h=400&fit=crop'">
       </div>
       <div class="product-body">
         <div class="product-tag">Body Protection</div>
-        <div class="product-name">Coveralls &amp; Hi-Vis Workwear</div>
+        <div class="product-name">Coveralls & Hi-Vis Workwear</div>
         <p class="product-desc">Flame-retardant, reflective and chemical-resistant coveralls and vests. Custom embroidery and bulk workwear programmes available.</p>
         <span class="product-link">View Range →</span>
       </div>
     </a>
  
+    <!-- 7. EARMUFFS - from your GitHub images folder -->
     <a href="https://mineafrica.co.za/Ear-Protection?ref=pPuyfECz9SHZrRc3w6zFwfW2f5yYo8LiN2hys3dTZKlSJrY2ypA72w21manqCKOA" target="_blank" class="product-card fade-up">
       <div class="product-img">
-        <img src="https://images.pexels.com/photos/3760958/pexels-photo-3760958.jpeg?auto=compress&cs=tinysrgb&w=600&h=400&fit=crop" alt="Industrial earmuffs and ear protection">
+        <img src="earmuffs.jpg" alt="Industrial earmuffs and ear defenders"
+          onerror="this.src='https://images.pexels.com/photos/3760958/pexels-photo-3760958.jpeg?auto=compress&cs=tinysrgb&w=600&h=400&fit=crop'">
       </div>
       <div class="product-body">
         <div class="product-tag">Hearing Protection</div>
-        <div class="product-name">Earplugs &amp; Earmuffs</div>
+        <div class="product-name">Earplugs & Earmuffs</div>
         <p class="product-desc">Disposable and reusable earplugs, corded options and over-ear earmuffs rated for high-noise industrial environments.</p>
         <span class="product-link">View Range →</span>
       </div>
     </a>
  
+    <!-- 8. HARNESSES - from your GitHub images folder -->
     <a href="https://mineafrica.co.za/Fall-Protection?ref=pPuyfECz9SHZrRc3w6zFwfW2f5yYo8LiN2hys3dTZKlSJrY2ypA72w21manqCKOA" target="_blank" class="product-card fade-up delay-1">
       <div class="product-img">
-        <img src="https://images.pexels.com/photos/1078884/pexels-photo-1078884.jpeg?auto=compress&cs=tinysrgb&w=600&h=400&fit=crop" alt="Worker in full body safety harness at height">
+        <img src="harnesses.jpg" alt="Safety harnesses and fall protection lanyards"
+          onerror="this.src='https://images.pexels.com/photos/1078884/pexels-photo-1078884.jpeg?auto=compress&cs=tinysrgb&w=600&h=400&fit=crop'">
       </div>
       <div class="product-body">
         <div class="product-tag">Fall Protection</div>
-        <div class="product-name">Harnesses &amp; Lanyards</div>
+        <div class="product-name">Harnesses & Lanyards</div>
         <p class="product-desc">Full-body harnesses, self-retracting lanyards and anchor systems for working at height across construction and mining sites.</p>
         <span class="product-link">View Range →</span>
       </div>
@@ -1202,17 +353,15 @@
  
   </div>
  
-  <!-- Mine Africa Affiliate Banner -->
   <div class="affiliate-banner fade-up">
     <div class="affiliate-text">
       <h3>🛒 Shop the Full Mine Africa Catalogue</h3>
       <p>As an official Mine Africa partner, Bohlokwa Safety Solutions gives you direct access to their full industrial PPE range — thousands of certified products available for delivery across South Africa.</p>
     </div>
-    <a href="https://mineafrica.co.za/Weekly-Specials?ref=pPuyfECz9SHZrRc3w6zFwfW2f5yYo8LiN2hys3dTZKlSJrY2ypA72w21manqCKOA" target="_blank" class="btn-primary" style="white-space: nowrap;">Full Mine Africa Catalogue ↗</a>
+    <a href="https://mineafrica.co.za/Weekly-Specials?ref=pPuyfECz9SHZrRc3w6zFwfW2f5yYo8LiN2hys3dTZKlSJrY2ypA72w21manqCKOA" target="_blank" class="btn-primary" style="white-space:nowrap;">Full Mine Africa Catalogue ↗</a>
   </div>
 </section>
  
-<!-- SECTORS -->
 <section id="sectors">
   <div class="section-header fade-up">
     <div>
@@ -1222,64 +371,25 @@
     <p class="section-desc">From underground mining to construction sites — we supply certified protection for South Africa's most demanding working environments.</p>
   </div>
   <div class="sectors-grid">
-    <div class="sector-card fade-up">
-      <div class="sector-icon">⛏️</div>
-      <div class="sector-name">Mining</div>
-      <p class="sector-desc">Underground and open-cast mining PPE solutions compliant with DMRE requirements.</p>
-    </div>
-    <div class="sector-card fade-up delay-1">
-      <div class="sector-icon">🏗️</div>
-      <div class="sector-name">Construction</div>
-      <p class="sector-desc">Site safety gear for contractors from foundations to finishing — NHBRC aware.</p>
-    </div>
-    <div class="sector-card fade-up delay-2">
-      <div class="sector-icon">🏭</div>
-      <div class="sector-name">Manufacturing</div>
-      <p class="sector-desc">Factory floor protection including chemical, mechanical and thermal hazards.</p>
-    </div>
-    <div class="sector-card fade-up">
-      <div class="sector-icon">⚡</div>
-      <div class="sector-name">Electrical</div>
-      <p class="sector-desc">ARC-rated gear, insulated gloves and dielectric footwear for HV environments.</p>
-    </div>
-    <div class="sector-card fade-up delay-1">
-      <div class="sector-icon">🚜</div>
-      <div class="sector-name">Agriculture</div>
-      <p class="sector-desc">Durable workwear, waterproof footwear and respiratory gear for farm operations.</p>
-    </div>
-    <div class="sector-card fade-up delay-2">
-      <div class="sector-icon">🔥</div>
-      <div class="sector-name">Oil & Gas</div>
-      <p class="sector-desc">Flame-retardant coveralls, gas detection and chemical-resistant PPE.</p>
-    </div>
+    <div class="sector-card fade-up"><div class="sector-icon">⛏️</div><div class="sector-name">Mining</div><p class="sector-desc">Underground and open-cast mining PPE solutions compliant with DMRE requirements.</p></div>
+    <div class="sector-card fade-up delay-1"><div class="sector-icon">🏗️</div><div class="sector-name">Construction</div><p class="sector-desc">Site safety gear for contractors from foundations to finishing — NHBRC aware.</p></div>
+    <div class="sector-card fade-up delay-2"><div class="sector-icon">🏭</div><div class="sector-name">Manufacturing</div><p class="sector-desc">Factory floor protection including chemical, mechanical and thermal hazards.</p></div>
+    <div class="sector-card fade-up"><div class="sector-icon">⚡</div><div class="sector-name">Electrical</div><p class="sector-desc">ARC-rated gear, insulated gloves and dielectric footwear for HV environments.</p></div>
+    <div class="sector-card fade-up delay-1"><div class="sector-icon">🚜</div><div class="sector-name">Agriculture</div><p class="sector-desc">Durable workwear, waterproof footwear and respiratory gear for farm operations.</p></div>
+    <div class="sector-card fade-up delay-2"><div class="sector-icon">🔥</div><div class="sector-name">Oil & Gas</div><p class="sector-desc">Flame-retardant coveralls, gas detection and chemical-resistant PPE.</p></div>
   </div>
 </section>
  
-<!-- BULK ORDERS -->
 <section id="bulk">
   <div class="bulk-inner">
     <div class="section-label fade-up">For Corporates & Contractors</div>
     <h2 class="section-title fade-up">Bulk Safety<br>Procurement</h2>
-    <p class="section-desc fade-up" style="margin: 0 auto 0;">Bohlokwa Safety Solutions, in partnership with Mine Africa, streamlines your bulk procurement. SABS-approved gear delivered directly to your site — from 10 units to 10,000.</p>
- 
+    <p class="section-desc fade-up" style="margin:0 auto;">Bohlokwa Safety Solutions, in partnership with Mine Africa, streamlines your bulk procurement. SABS-approved gear delivered directly to your site — from 10 units to 10,000.</p>
     <div class="bulk-steps">
-      <div class="step fade-up">
-        <div class="step-num">01</div>
-        <div class="step-title">Request a Quote</div>
-        <p class="step-desc">Tell us what you need, quantities and your sector. We respond within 24 hours.</p>
-      </div>
-      <div class="step fade-up delay-1">
-        <div class="step-num">02</div>
-        <div class="step-title">We Source & Price</div>
-        <p class="step-desc">We pull from multiple suppliers to give you the best certified product at best value.</p>
-      </div>
-      <div class="step fade-up delay-2">
-        <div class="step-num">03</div>
-        <div class="step-title">Direct Delivery</div>
-        <p class="step-desc">SABS-compliant gear delivered directly to your site anywhere in South Africa.</p>
-      </div>
+      <div class="step fade-up"><div class="step-num">01</div><div class="step-title">Request a Quote</div><p class="step-desc">Tell us what you need, quantities and your sector. We respond within 24 hours.</p></div>
+      <div class="step fade-up delay-1"><div class="step-num">02</div><div class="step-title">We Source & Price</div><p class="step-desc">We pull from multiple suppliers to give you the best certified product at best value.</p></div>
+      <div class="step fade-up delay-2"><div class="step-num">03</div><div class="step-title">Direct Delivery</div><p class="step-desc">SABS-compliant gear delivered directly to your site anywhere in South Africa.</p></div>
     </div>
- 
     <div class="bulk-buttons">
       <a href="#" class="btn-primary" onclick="openModal()">Request Corporate Quote</a>
       <a href="tel:+27729159871" class="btn-secondary">📞 +27 72 915 9871</a>
@@ -1287,33 +397,19 @@
   </div>
 </section>
  
-<!-- ABOUT -->
 <section id="about">
   <div>
     <div class="section-label fade-up">Who We Are</div>
     <h2 class="section-title fade-up">Protecting Africa's<br>Workforce</h2>
-    <p class="section-desc fade-up" style="margin-top: 16px;">Bohlokwa Safety Solutions is an official supplier of premium industrial protective equipment, based in Gauteng, South Africa. We operate as an official Mine Africa partner, bringing certified safety gear to the continent's most demanding sectors.</p>
-    <p class="section-desc fade-up" style="margin-top: 16px;">Our name means "protection" — and that's exactly what we deliver. Whether you're outfitting a single worker or a workforce of thousands, we make sure every person goes home safe.</p>
+    <p class="section-desc fade-up" style="margin-top:16px;">Bohlokwa Safety Solutions is an official supplier of premium industrial protective equipment, based in Gauteng, South Africa. We operate as an official Mine Africa partner, bringing certified safety gear to the continent's most demanding sectors.</p>
+    <p class="section-desc fade-up" style="margin-top:16px;">Our name means "protection" — and that's exactly what we deliver. Whether you're outfitting a single worker or a workforce of thousands, we make sure every person goes home safe.</p>
     <div class="about-stats fade-up">
-      <div class="stat">
-        <div class="stat-num">500+</div>
-        <div class="stat-label">Products Available</div>
-      </div>
-      <div class="stat">
-        <div class="stat-num">SABS</div>
-        <div class="stat-label">All Products Certified</div>
-      </div>
-      <div class="stat">
-        <div class="stat-num">24hr</div>
-        <div class="stat-label">Quote Response</div>
-      </div>
-      <div class="stat">
-        <div class="stat-num">RSA</div>
-        <div class="stat-label">Nationwide Delivery</div>
-      </div>
+      <div class="stat"><div class="stat-num">500+</div><div class="stat-label">Products Available</div></div>
+      <div class="stat"><div class="stat-num">SABS</div><div class="stat-label">All Products Certified</div></div>
+      <div class="stat"><div class="stat-num">24hr</div><div class="stat-label">Quote Response</div></div>
+      <div class="stat"><div class="stat-num">RSA</div><div class="stat-label">Nationwide Delivery</div></div>
     </div>
   </div>
- 
   <div class="about-img-block fade-up">
     <div class="about-img">
       <img src="https://images.unsplash.com/photo-1581578731548-c64695cc6952?w=800&q=80" alt="Industrial safety workers" onerror="this.parentElement.innerHTML='⚙️'">
@@ -1322,7 +418,6 @@
   </div>
 </section>
  
-<!-- CONTACT -->
 <section id="contact">
   <div class="section-header fade-up">
     <div>
@@ -1331,14 +426,13 @@
     </div>
     <p class="section-desc">Whether you need a quick quote or a full site procurement plan — we're ready. Reach out via any channel below.</p>
   </div>
- 
   <div class="contact-grid">
     <div class="contact-info fade-up">
       <div class="contact-item">
         <div class="contact-icon">📞</div>
         <div>
           <div class="contact-label">Sales Hotline</div>
-          <div class="contact-value"><a href="tel:+27729159871" style="color: inherit; text-decoration: none;">+27 72 915 9871</a></div>
+          <div class="contact-value"><a href="tel:+27729159871" style="color:inherit;text-decoration:none;">+27 72 915 9871</a></div>
         </div>
       </div>
       <div class="contact-item">
@@ -1346,7 +440,7 @@
         <div>
           <div class="contact-label">Email Inquiries</div>
           <div class="contact-value">
-            <a href="/cdn-cgi/l/email-protection#0861666e67486a67606467637f697b696e6d7c717b67647d7c6167667b266b67267269" style="color: inherit; text-decoration: none;"><span class="__cf_email__" data-cfemail="acc5c2cac3eccec3c4c0c3c7dbcddfcdcac9d8d5dfc3c0d9d8c5c3c2df82cfc382d6cd">[email&#160;protected]</span></a>
+            <a href="mailto:info@bohlokwasafetysolutions.co.za" style="color:inherit;text-decoration:none;">info@bohlokwasafetysolutions.co.za</a>
           </div>
         </div>
       </div>
@@ -1364,41 +458,24 @@
           <div class="contact-value">Mon – Fri: 08:00 – 17:00</div>
         </div>
       </div>
- 
-      <div style="margin-top: 16px;">
-        <div class="section-label" style="margin-bottom: 14px;">Sourcing Partners</div>
-        <div style="display: flex; flex-direction: column; gap: 10px;">
-          <a href="https://mineafrica.co.za/Weekly-Specials?ref=pPuyfECz9SHZrRc3w6zFwfW2f5yYo8LiN2hys3dTZKlSJrY2ypA72w21manqCKOA" target="_blank" style="color: var(--orange); font-size: 14px; font-weight: 600; text-decoration: none;">→ Mine Africa Full Catalogue</a>
-          <span style="color: var(--grey-light); font-size: 14px;">→ U-Safety Solutions</span>
-          <span style="color: var(--grey-light); font-size: 14px;">→ Regional Distributors</span>
+      <div style="margin-top:16px;">
+        <div class="section-label" style="margin-bottom:14px;">Sourcing Partners</div>
+        <div style="display:flex;flex-direction:column;gap:10px;">
+          <a href="https://mineafrica.co.za/Weekly-Specials?ref=pPuyfECz9SHZrRc3w6zFwfW2f5yYo8LiN2hys3dTZKlSJrY2ypA72w21manqCKOA" target="_blank" style="color:var(--orange);font-size:14px;font-weight:600;text-decoration:none;">→ Mine Africa Full Catalogue</a>
+          <span style="color:var(--grey-light);font-size:14px;">→ U-Safety Solutions</span>
+          <span style="color:var(--grey-light);font-size:14px;">→ Regional Distributors</span>
         </div>
       </div>
     </div>
- 
     <div class="contact-form fade-up delay-1">
       <div class="form-title">Request a Quote</div>
       <div class="form-row">
-        <div class="form-group">
-          <label>First Name</label>
-          <input type="text" placeholder="Thabo">
-        </div>
-        <div class="form-group">
-          <label>Last Name</label>
-          <input type="text" placeholder="Mokoena">
-        </div>
+        <div class="form-group"><label>First Name</label><input type="text" placeholder="Thabo"></div>
+        <div class="form-group"><label>Last Name</label><input type="text" placeholder="Mokoena"></div>
       </div>
-      <div class="form-group">
-        <label>Company / Organisation</label>
-        <input type="text" placeholder="Your company name">
-      </div>
-      <div class="form-group">
-        <label>Email Address</label>
-        <input type="email" placeholder="you@company.co.za">
-      </div>
-      <div class="form-group">
-        <label>Phone Number</label>
-        <input type="tel" placeholder="+27 ...">
-      </div>
+      <div class="form-group"><label>Company / Organisation</label><input type="text" placeholder="Your company name"></div>
+      <div class="form-group"><label>Email Address</label><input type="email" placeholder="you@company.co.za"></div>
+      <div class="form-group"><label>Phone Number</label><input type="tel" placeholder="+27 ..."></div>
       <div class="form-group">
         <label>Product Category</label>
         <select>
@@ -1415,20 +492,16 @@
           <option>Other / Not Sure</option>
         </select>
       </div>
-      <div class="form-group">
-        <label>Message / Quantity Required</label>
-        <textarea placeholder="Tell us what you need, how many units, and your timeline..."></textarea>
-      </div>
-      <button class="btn-primary" style="width: 100%; justify-content: center; border: none; cursor: pointer; font-size: 14px;" onclick="handleFormSubmit(event)">Send Quote Request →</button>
+      <div class="form-group"><label>Message / Quantity Required</label><textarea placeholder="Tell us what you need, how many units, and your timeline..."></textarea></div>
+      <button class="btn-primary" style="width:100%;justify-content:center;border:none;cursor:pointer;font-size:14px;" onclick="handleFormSubmit(event)">Send Quote Request →</button>
     </div>
   </div>
 </section>
  
-<!-- FOOTER -->
 <footer>
   <div class="footer-grid">
     <div class="footer-about">
-      <a href="#hero" class="logo" style="display: inline-flex;">
+      <a href="#hero" class="logo" style="display:inline-flex;">
         <div class="logo-mark">BK</div>
         <div class="logo-text">
           <span class="logo-name">Bohlokwa.</span>
@@ -1437,7 +510,6 @@
       </a>
       <p>Official supplier of premium industrial protective equipment. Bohlokwa Safety Solutions — Protecting Africa's workforce in partnership with Mine Africa.</p>
     </div>
- 
     <div class="footer-col">
       <h4>Sourcing Partners</h4>
       <ul>
@@ -1446,7 +518,6 @@
         <li><a href="#">Regional Distributors</a></li>
       </ul>
     </div>
- 
     <div class="footer-col">
       <h4>Quick Links</h4>
       <ul>
@@ -1457,23 +528,21 @@
         <li><a href="#contact">Contact</a></li>
       </ul>
     </div>
- 
     <div class="footer-col">
       <h4>Client Portal</h4>
-      <p style="color: var(--grey); font-size: 13px; line-height: 1.6; margin-bottom: 14px;">Get the latest SABS regulation updates and new gear releases directly to your inbox.</p>
+      <p style="color:var(--grey);font-size:13px;line-height:1.6;margin-bottom:14px;">Get the latest SABS regulation updates and new gear releases directly to your inbox.</p>
       <div class="newsletter-form">
-        <input type="email" placeholder="Your work email">
+        <input type="email" id="newsletterEmail" placeholder="Your work email">
         <button onclick="handleNewsletter(event)">Subscribe to List</button>
       </div>
     </div>
   </div>
- 
   <div class="footer-bottom">
     <p>© 2025 Bohlokwa Safety Solutions. All rights reserved. | Gauteng, South Africa</p>
-    <div style="display: flex; align-items: center; gap: 20px; flex-wrap: wrap;">
-      <p style="color: var(--grey); font-size: 11px;">
-        Direct Contact: <a href="tel:+27729159871" style="color: var(--orange); text-decoration: none;">+27 72 915 9871</a> &nbsp;|&nbsp;
-        <a href="/cdn-cgi/l/email-protection#e48d8a828ba4868b8c888b8f938597858281909d978b8891908d8b8a97ca878bca9e85" style="color: var(--orange); text-decoration: none;"><span class="__cf_email__" data-cfemail="355c5b535a75575a5d595a5e425446545350414c465a5940415c5a5b461b565a1b4f54">[email&#160;protected]</span></a>
+    <div style="display:flex;align-items:center;gap:20px;flex-wrap:wrap;">
+      <p style="color:var(--grey);font-size:11px;">
+        Direct Contact: <a href="tel:+27729159871" style="color:var(--orange);text-decoration:none;">+27 72 915 9871</a> &nbsp;|&nbsp;
+        <a href="mailto:info@bohlokwasafetysolutions.co.za" style="color:var(--orange);text-decoration:none;">info@bohlokwasafetysolutions.co.za</a>
       </p>
       <div class="footer-social">
         <a href="#" class="social-btn" title="Facebook">📘</a>
@@ -1484,61 +553,78 @@
   </div>
 </footer>
  
-<!-- QUOTE MODAL -->
 <div class="modal-overlay" id="quoteModal" onclick="closeModalOutside(event)">
   <div class="modal">
     <button class="modal-close" onclick="closeModal()">✕</button>
     <div class="section-label">Quick Quote</div>
-    <h3 style="font-family: 'Barlow Condensed', sans-serif; font-size: 28px; font-weight: 900; text-transform: uppercase; margin-bottom: 24px;">Get a Quote</h3>
+    <h3 style="font-family:'Barlow Condensed',sans-serif;font-size:28px;font-weight:900;text-transform:uppercase;margin-bottom:24px;">Get a Quote</h3>
     <div class="form-row">
-      <div class="form-group">
-        <label>First Name</label>
-        <input type="text" placeholder="Thabo">
-      </div>
-      <div class="form-group">
-        <label>Last Name</label>
-        <input type="text" placeholder="Mokoena">
-      </div>
+      <div class="form-group"><label>First Name</label><input type="text" placeholder="Thabo"></div>
+      <div class="form-group"><label>Last Name</label><input type="text" placeholder="Mokoena"></div>
     </div>
-    <div class="form-group">
-      <label>Email</label>
-      <input type="email" placeholder="you@company.co.za">
-    </div>
-    <div class="form-group">
-      <label>Phone</label>
-      <input type="tel" placeholder="+27 ...">
-    </div>
-    <div class="form-group">
-      <label>What do you need?</label>
-      <textarea placeholder="Describe the PPE, quantities and your sector..."></textarea>
-    </div>
-    <button class="btn-primary" style="width: 100%; justify-content: center; border: none; cursor: pointer;" onclick="handleFormSubmit(event)">Send Request →</button>
+    <div class="form-group"><label>Email</label><input type="email" placeholder="you@company.co.za"></div>
+    <div class="form-group"><label>Phone</label><input type="tel" placeholder="+27 ..."></div>
+    <div class="form-group"><label>What do you need?</label><textarea placeholder="Describe the PPE, quantities and your sector..."></textarea></div>
+    <button class="btn-primary" style="width:100%;justify-content:center;border:none;cursor:pointer;" onclick="handleFormSubmit(event)">Send Request →</button>
   </div>
 </div>
  
-<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
-  // Add js-ready so fade-up CSS activates only when JS is running
+<script>
   document.body.classList.add('js-ready');
  
-  // Mark all fade-up elements as visible immediately as a fallback
-  // then let IntersectionObserver handle the animation properly
   function makeAllVisible() {
     document.querySelectorAll('.fade-up').forEach(el => el.classList.add('visible'));
   }
  
-  // Scroll animations — use threshold 0 so items never get "stuck" invisible
   const observer = new IntersectionObserver((entries) => {
-    entries.forEach(e => {
-      if (e.isIntersecting) e.target.classList.add('visible');
-    });
+    entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
   }, { threshold: 0, rootMargin: '0px 0px -40px 0px' });
  
   document.querySelectorAll('.fade-up').forEach(el => observer.observe(el));
- 
-  // Safety net: after 1.5s make everything visible regardless
   setTimeout(makeAllVisible, 1500);
  
-  // Nav scroll effect
   window.addEventListener('scroll', () => {
     const nav = document.getElementById('navbar');
-    nav.style.background = win
+    nav.style.background = window.scrollY > 50 ? 'rgba(13,17,23,0.98)' : 'rgba(13,17,23,0.92)';
+  });
+ 
+  function toggleMobile() {
+    document.getElementById('mobileMenu').classList.toggle('open');
+  }
+ 
+  function openModal() {
+    document.getElementById('quoteModal').classList.add('open');
+    document.body.style.overflow = 'hidden';
+  }
+ 
+  function closeModal() {
+    document.getElementById('quoteModal').classList.remove('open');
+    document.body.style.overflow = '';
+  }
+ 
+  function closeModalOutside(e) {
+    if (e.target === document.getElementById('quoteModal')) closeModal();
+  }
+ 
+  function handleFormSubmit(e) {
+    e.preventDefault();
+    const btn = e.target;
+    const originalText = btn.textContent;
+    btn.textContent = '✓ Sent! We\'ll contact you within 24 hours.';
+    btn.style.background = '#16a34a';
+    setTimeout(() => {
+      btn.textContent = originalText;
+      btn.style.background = '';
+      closeModal();
+    }, 3000);
+  }
+ 
+  function handleNewsletter(e) {
+    e.preventDefault();
+    const emailInput = document.getElementById('newsletterEmail');
+    const email = emailInput ? emailInput.value.trim() : '';
+    if (!email || !email.includes('@')) {
+      alert('Please enter a valid email address.');
+      return;
+    }
+    const b
